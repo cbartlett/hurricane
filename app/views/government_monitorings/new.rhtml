@@ -1,0 +1,49 @@
+<fieldset class="urlaSection" id="GovernmentMonitoring">
+	<legend>Government Monitoring</legend>
+
+	<%= error_messages_for :government_monitoring %>
+
+	<% form_for(:government_monitoring, :url => government_monitorings_path) do |f| %>
+
+		<%= f.check_box :race_national_origin_refusal_indicator, :class => "mooter" %>
+		<label for="government_monitoring_race_national_origin_refusal_indicator">I do not wish to furnish this information</label>
+	
+		<fieldset class="urlaSubsection" id="govtMonInfo">
+			<fieldset class="radioGroup">				
+				<legend>Sex</legend>
+				    <% GovernmentMonitoring::GENDERTYPE.each do |gender_type| %>
+						<%= f.radio_button(:gender_type, gender_type) %>
+							<%= '<label for="government_monitoring_gender_type_' + gender_type.downcase + '">'+gender_type+'</label>' %>
+					<% end %>
+			</fieldset>
+
+
+			<fieldset class="checkboxGroup">
+				<legend>Race</legend>				
+					<%= f.check_box :hmda_race_american_indian_or_alaska_native %>
+						<label for="government_monitoring_hmda_race_american_indian_or_alaska_native">American Indian</label>   
+					<%= f.check_box :hmda_race_asian %>	
+						<label for="government_monitoring_hmda_race_asian">Asian</label>
+					<%= f.check_box :hmda_race_black_or_african_american %>
+						<label for="government_monitoring_hmda_race_black_or_african_american">Black or African American</label>
+					<%= f.check_box :hmda_race_native_hawaiian_or_other_pacific_islander %>
+						<label for="government_monitoring_hmda_race_native_hawaiian_or_other_pacific_islander">Hawaiian or Other Pacific Islander</label>
+					<%= f.check_box :hmda_race_white %>	
+						<label for="government_monitoring_hmda_race_white">White</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>Ethnicity</legend>
+				    <% GovernmentMonitoring::HMDAETHNICITYTYPE.each do |hmda_ethnicity_type_presented_value, hmda_ethnicity_type_internal_value| %>
+						<%= f.radio_button(:hmda_ethnicity_type, hmda_ethnicity_type_internal_value) %>
+							<%= '<label for="government_monitoring_hmda_ethnicity_type_' + hmda_ethnicity_type_internal_value.downcase + '">'+hmda_ethnicity_type_presented_value+'</label>' %>
+					<% end %>
+			</fieldset>
+		</fieldset>
+		
+		<ul class="nav">
+			<li><a class="prev" href="/government_monitorings">Back</a></li>
+		</ul>	
+	    <%= submit_tag "Create" %>
+	<% end %>
+</fieldset>

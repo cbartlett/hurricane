@@ -1,0 +1,160 @@
+body {
+  font-family:helvetica,arial,sans-serif;
+}
+
+#banner {
+  background: url(../images/cloudeye.jpg) no-repeat top left;
+  height: 49px;
+  padding-left: 78px;
+}
+
+#sectionNav {
+  background: url(../images/forestmist.jpg) no-repeat top left;
+  max-width: 147px;
+  float: left;
+  width: 20%;
+  background-color: #cccccc;
+}
+
+#sectionNav h2 {
+  font-size: 100%;
+}
+
+#finis {
+  background: url(../images/tree.jpg) no-repeat;
+  background-position: 100% -610px;
+  color: #fcf6cf;
+}
+
+label { 
+  display: block;
+  float: left;
+  clear: left;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+
+input {
+  margin-right: 0.5em;
+}
+
+input + span.hint {
+  display: none;
+  font-size: 75%;
+  background-color: #fcf6cf;
+  border: 1px #f1edc2 solid;
+}
+
+input:focus + span.hint {
+  display: inline;
+}
+
+#type_OtherExplanation {
+  width: 36em;
+}
+
+fieldset.urlaSection fieldset, ul.nav {
+  clear: left;
+}
+
+fieldset.urlaSection {
+  border: 1px solid #bfbab0;
+  background-color: #fbf5e6;
+  float: right;
+  clear: none;
+  width: 76%;
+}
+
+fieldset.urlaSection > legend {
+  margin-top: 0em;
+border: none;
+padding: 0.25em;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+
+fieldset.urlaSection fieldset {
+  border: none;
+  border-top: 1px solid #bfbab0;
+  margin_bottom: 1.5em;
+}
+
+fieldset fieldset legend {  
+  background-color: transparent;
+  color: black;
+border: none;
+}
+
+#mortgType label, #amortType label, #ethnicity label, #sex  label {
+/* inline fieldsets */
+  clear: none;
+}
+
+h1 {
+  color:#900;
+  font-size: 120%;
+}
+
+.urlaSection {
+  display: none;
+}
+
+*:target {
+  display: block;
+}
+
+ul.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#sectionNav ul {
+  margin-left: 0.5em;
+  padding: 0;
+  list-style: none;
+}
+
+#sectionNav li {
+  font-size: 60%;
+}
+
+#sectionNav ul li a, ul.nav li a {
+  text-decoration: none;
+}
+
+#sectionNav ul li a:hover, ul.nav li a:hover {
+  text-decoration: underline;
+}
+
+ul.nav li {
+  float: left;
+/*  padding-right: 1em; */
+  margin-top: 0.25em;
+  margin-right: 0.5em; 
+/*   border-right: solid 1px blue;
+  border-bottom: solid 1px blue; */
+  padding-bottom: 0.25em;
+}
+
+ul.nav li a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  text-indent: -900px;
+  overflow: hidden;
+}
+
+ul.nav li a.prev {
+  background: url(../images/control_rewind_blue.png) no-repeat left;
+}
+
+ul.nav li a.next {
+  background: url(../images/control_fastforward_blue.png) no-repeat right;
+}
+
+ul.nav li a.top {
+  background: url(../images/control_start_blue.png) no-repeat left;
+}

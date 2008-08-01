@@ -1,0 +1,81 @@
+<h1>New loan_application</h1>
+
+<%= error_messages_for :loan_application %>
+
+<% form_for(:loan_application, :url => loan_applications_path) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Borrower name</b><br />
+    <%= f.text_field :borrower_name %>
+  </p>
+
+  <p>
+    <b>Coborrower indicator</b><br />
+    <%= f.check_box :coborrower_indicator %>
+  </p>
+
+  <p>
+    <b>Coborrower name</b><br />
+    <%= f.text_field :coborrower_name %>
+  </p>
+
+  <p>
+    <b>Property street</b><br />
+    <%= f.text_field :property_street %>
+  </p>
+
+  <p>
+    <b>Property city</b><br />
+    <%= f.text_field :property_city %>
+  </p>
+
+  <p>
+    <b>Property state</b><br />
+    <%= f.text_field :property_state %>
+  </p>
+
+  <p>
+    <b>Property postal code</b><br />
+    <%= f.text_field :property_postal_code %>
+  </p>
+
+  <p>
+    <b>Created</b><br />
+    <%= f.date_select :created %>
+  </p>
+
+  <p>
+    <b>Last updated</b><br />
+    <%= f.date_select :last_updated %>
+  </p>
+
+  <p>
+    <b>Status</b><br />
+    <%= f.text_field :status %>
+  </p>
+
+  <p>
+    <b>No spouse indicator</b><br />
+    <%= f.check_box :no_spouse_indicator %>
+  </p>
+
+  <p>
+    <b>Other assets indicator</b><br />
+    <%= f.check_box :other_assets_indicator %>
+  </p>
+
+  <p>
+    <b>Acknowledgement indicator</b><br />
+    <%= f.check_box :acknowledgement_indicator %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', loan_applications_path %>

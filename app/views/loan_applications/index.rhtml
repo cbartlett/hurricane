@@ -1,0 +1,46 @@
+<h1>Listing loan_applications</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Borrower name</th>
+    <th>Coborrower indicator</th>
+    <th>Coborrower name</th>
+    <th>Property street</th>
+    <th>Property city</th>
+    <th>Property state</th>
+    <th>Property postal code</th>
+    <th>Created</th>
+    <th>Last updated</th>
+    <th>Status</th>
+    <th>No spouse indicator</th>
+    <th>Other assets indicator</th>
+    <th>Acknowledgement indicator</th>
+  </tr>
+  
+<% for loan_application in @loan_applications %>
+  <tr>
+    <td><%=h loan_application.name %></td>
+    <td><%=h loan_application.borrower_name %></td>
+    <td><%=h loan_application.coborrower_indicator %></td>
+    <td><%=h loan_application.coborrower_name %></td>
+    <td><%=h loan_application.property_street %></td>
+    <td><%=h loan_application.property_city %></td>
+    <td><%=h loan_application.property_state %></td>
+    <td><%=h loan_application.property_postal_code %></td>
+    <td><%=h loan_application.created %></td>
+    <td><%=h loan_application.last_updated %></td>
+    <td><%=h loan_application.status %></td>
+    <td><%=h loan_application.no_spouse_indicator %></td>
+    <td><%=h loan_application.other_assets_indicator %></td>
+    <td><%=h loan_application.acknowledgement_indicator %></td>
+    <td><%= link_to 'Show', loan_application_path(loan_application) %></td>
+    <td><%= link_to 'Edit', edit_loan_application_path(loan_application) %></td>
+    <td><%= link_to 'Destroy', loan_application_path(loan_application), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New loan_application', new_loan_application_path %>

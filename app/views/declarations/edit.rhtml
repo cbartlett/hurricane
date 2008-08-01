@@ -1,0 +1,100 @@
+<h1>Declaration</h1>
+
+<%= error_messages_for :declaration %>
+
+<% form_for(:declaration, :url => declaration_path(@declaration), :html => { :method => :put }) do |f| %>
+ 	        
+  <p class="question">
+    <b>a. Are there any outstanding judgments against you?</b><br />
+    <%= f.radio_button :outstanding_judgements_indicator,"Yes" %>
+    <%= f.radio_button :outstanding_judgements_indicator,"No" %>
+	<%= f.text_field :dec_desc_outstanding_judgments %>  
+  </p>
+
+  <p class="question">
+    <b>b. Have you been bankrupt within the last 7 years?</b><br />
+    <%= f.check_box :bankruptcy_indicator %>
+  	<%= f.text_field :dec_desc_declared_bankruptcy_past_seven_years %>
+  </p>
+
+  <p class="question">
+    <b>c. Have you had property foreclosed upon or given title or deed in lieu thereof in the last 7 years?</b><br />
+    <%= f.check_box :property_foreclosed_past_seven_years_indicator %>
+	<%= f.text_field :dec_desc_direct_indirect_foreclosed_property_past_seven_years %>
+  </p>
+
+  <p class="question">
+    <b>d. Are you a party to a lawsuit?</b><br />	
+    <%= f.check_box :party_to_lawsuit_indicator %>
+	<%= f.text_field :dec_desc_party_to_lawsuit %>
+  </p>
+
+  <p class="question">
+    <b>e. Have you directly or indirectly been obligated on a loan which resulted in foreclosure, transfer of title in lieu of foreclosure, or judgment?</b><br />
+    <%= f.check_box :loan_foreclosure_or_judgement_indicator %>  
+	<%= f.text_field :dec_desc_obligated_on_loan_foreclosed_or_deed_in_lieu_of_jdgmnt %>
+  </p>
+
+  <p class="question">
+    <b>f. Are you presently delinquent or in default on any Federal debt or any other loan, mortgage, financial obligation, bond or loan guarantee?</b><br />
+    <%= f.check_box :presently_delinquent_indicator %>
+	<%= f.text_field :dec_desc_delinquency_or_default %>
+  </p>
+
+  <p class="question">
+    <b>g. Are you obligated to pay alimony, child support or separate maintenance?</b><br />
+    <%= f.check_box :alimony_child_support_obligation_indicator %>
+	<%= f.text_field :dec_desc_alimony_child_support %>
+  </p>
+
+  <p class="question">
+    <b>h. Is any part of the down payment borrowed?</b><br />
+    <%= f.check_box :borrowed_down_payment_indicator %>
+	<%= f.text_field :dec_desc_borrowed_down_payment %>
+  </p>
+
+  <p class="question">
+    <b>i. Are you a co-maker or endorser on a note?</b><br />
+    <%= f.check_box :co_maker_endorser_of_note_indicator %>
+	<%= f.text_field :dec_desc_co_maker_endorser_on_note %>
+  </p>
+
+  <p class="question">
+    <b>j. Are you a U.S. citizen?</b><br />
+	<%= f.select(:citizenship_residency_type, Declaration::CITIZENSHIPRESIDENCYTYPE) %>
+  </p>
+
+  <p class="question">
+    <b>k. Are you a permanent resident alien?</b><br />
+	#No match for field or question
+    <%= f.check_box :borrower_first_time_homebuyer_indicator %>
+
+  </p>
+
+  <p class="question">
+    <b>l. Do you intend to occupy the property as your primary residence? If yes, complete question m below.</b><br />
+	<%= f.select(:intent_to_occupy_type, Declaration::INTENTTOOCCUPYTYPE) %>
+  </p>
+
+  <p class="question">
+    <b>m. Have you had an ownership interest in a property in the last three years?</b><br />
+	<%= f.select(:homeowner_past_three_years_type, Declaration::HOMEOWNERPASTTHREEYEARSTYPE) %>
+  </p>
+
+  <p class="question">
+    <b>(1) What type of property did you own? - -principal residence (PR), second home (SH), or investment property (IP).</b><br />
+	<%= f.select(:prior_property_usage_type, Declaration::PRIORPROPERTYUSAGETYPE) %>
+  </p>
+
+  <p class="question">
+    <b>(2) How did you hold title to the home?- - solely by yourself (S), jointly with your spouse (SP), or jointly with another person (O). </b><br />
+	<%= f.select(:prior_property_title_type, Declaration::PRIORPROPERTYTITLETYPE) %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', declaration_path(@declaration) %> |
+<%= link_to 'Back', declarations_path %>

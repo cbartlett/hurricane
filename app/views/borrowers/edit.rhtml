@@ -1,0 +1,82 @@
+<h1>Editing borrower</h1>
+
+<%= error_messages_for 'borrower' %>
+
+<% form_for(:borrower, :url => borrower_path(@loan_application, @borrower), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Borrower first name</b><br />
+    <%= f.text_field :borrower_first_name %>
+  </p>
+
+  <p>
+    <b>Borrower middle name</b><br />
+    <%= f.text_field :borrower_middle_name %>
+  </p>
+
+  <p>
+    <b>Borrower last name</b><br />
+    <%= f.text_field :borrower_last_name %>
+  </p>
+
+  <p>
+    <b>Borrower name suffix</b><br />
+    <%= f.text_field :borrower_name_suffix %>
+  </p>
+
+  <p>
+    <b>Borrower application signed date</b><br />
+    <%= f.date_select :borrower_application_signed_date %>
+  </p>
+
+  <p>
+    <b>Borrower home telephone number</b><br />
+    <%= f.text_field :borrower_home_telephone_number %>
+  </p>
+
+  <p>
+    <b>Borrower print position</b><br />
+    <%= f.text_field :borrower_print_position %>
+  </p>
+
+  <p>
+    <b>Borrower ssn</b><br />
+    <%= f.text_field :borrower_ssn %>
+  </p>
+
+  <p>
+    <b>Borrower birth date</b><br />
+    <%= f.text_field :borrower_birth_date %>
+  </p>
+
+  <p>
+    <b>Borrower unparsed name</b><br />
+    <%= f.text_field :borrower_unparsed_name %>
+  </p>
+
+  <p>
+    <b>Borrower dependent count</b><br />
+    <%= f.text_field :borrower_dependent_count %>
+  </p>
+
+  <p>
+    <b>Joint asset liability reporting</b><br />
+    <%= f.text_field :joint_asset_liability_reporting %>
+  </p>
+
+  <p>
+    <b>Marital status</b><br />
+    <%= f.text_field :marital_status %>
+  </p>
+
+  <p>
+    <b>Schooling years</b><br />
+    <%= f.text_field :schooling_years %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', borrower_path(@loan_application, @borrower) %> |
+<%= link_to 'Back', borrowers_path(@loan_application) %>

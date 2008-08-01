@@ -1,0 +1,27 @@
+<h1>Schedule of Real Estate Owned</h1>
+
+<table>
+  <tr>
+    <th>Street address</th>
+    <th>Street address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postal code</th>
+    <th>Disposition</th>
+    <th>Type of Property</th>
+    <th>Present Market Value</th>
+    <th>Amount of Mortgages and Liens</th>
+    <th>Gross Rental Income</th>
+    <th>Mortgage Payments</th>
+    <th>Insurance, Maintenance, Taxes & Misc.</th>
+    <th>Net Rental Income</th>
+  </tr>
+</table>
+
+<ul id="reo_property_list">
+  <%= render(:partial => "reo_property", :collection => @reo_properties) %>
+</ul>  
+
+<br />
+
+<%= link_to_remote 'New Real Estate Owned Property', {:url => new_reo_property_path}, {:id => "add_reo_property_link" } %>

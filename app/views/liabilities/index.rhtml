@@ -1,0 +1,29 @@
+<h1>Liabilities</h1>
+
+<table>
+  <tr>
+    <th>Liability type</th>
+    <th>Holder name</th>
+    <th>Holder street address</th>
+    <th>Holder city</th>
+    <th>Holder state</th>
+    <th>Holder postal code</th>
+    <th>Account identifier</th>
+    <th>Monthly payment amount</th>
+    <th>Remaining term months</th>
+    <th>Unpaid balance amount</th>
+    <th>Payoff status indicator</th>
+    <th>Exclusion indicator</th>
+    <th>Payoff with current assets indicator</th>
+    <th>Alimony owed to name</th>
+    <th>Subject loan resubordination indicator</th>
+  </tr>
+</table>
+
+<ul id="liability_list">
+  <%= render(:partial => "liability", :collection => @liabilities) %>
+</ul>  
+
+<br />
+
+<%= link_to_remote 'New Liability', {:url => new_liability_path}, {:id => "add_liability_link" } %>

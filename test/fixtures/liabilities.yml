@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  holder_street_address: MyString
+  holder_city: MyString
+  holder_state: MyString
+  holder_postal_code: MyString
+  alimony_owed_to_name: MyString
+  account_identifier: MyString
+  exclusion_indicator: false
+  holder_name: MyString
+  monthly_payment_amount: 9.99
+  payoff_status_indicator: false
+  payoff_with_current_assets_indicator: false
+  remaining_term_months: 1
+  liability_type: MyString
+  unpaid_balance_amount: 9.99
+  subject_loan_resubordination_indicator: false
+two:
+  id: 2
+  holder_street_address: MyString
+  holder_city: MyString
+  holder_state: MyString
+  holder_postal_code: MyString
+  alimony_owed_to_name: MyString
+  account_identifier: MyString
+  exclusion_indicator: false
+  holder_name: MyString
+  monthly_payment_amount: 9.99
+  payoff_status_indicator: false
+  payoff_with_current_assets_indicator: false
+  remaining_term_months: 1
+  liability_type: MyString
+  unpaid_balance_amount: 9.99
+  subject_loan_resubordination_indicator: false

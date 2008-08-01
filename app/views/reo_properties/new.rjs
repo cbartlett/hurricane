@@ -1,0 +1,3 @@
+page.insert_html(:bottom, 'reo_property_list', :partial => "reo_property")
+page.visual_effect :highlight, 'reo_property_list'
+page.hide 'add_reo_property_link'  # really want to diable but this needs some css magic

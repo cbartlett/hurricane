@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  alimony_child_support_obligation_indicator: false
+  bankruptcy_indicator: false
+  borrowed_down_payment_indicator: false
+  citizenship_residency_type: MyString
+  co_maker_endorser_of_note_indicator: false
+  homeowner_past_three_years_type: MyString
+  intent_to_occupy_type: MyString
+  loan_foreclosure_or_judgement_indicator: false
+  outstanding_judgements_indicator: false
+  party_to_lawsuit_indicator: false
+  presently_delinquent_indicator: false
+  prior_property_title_type: MyString
+  prior_property_usage_type: MyString
+  property_foreclosed_past_seven_years_indicator: false
+  borrower_first_time_homebuyer_indicator: false
+two:
+  id: 2
+  alimony_child_support_obligation_indicator: false
+  bankruptcy_indicator: false
+  borrowed_down_payment_indicator: false
+  citizenship_residency_type: MyString
+  co_maker_endorser_of_note_indicator: false
+  homeowner_past_three_years_type: MyString
+  intent_to_occupy_type: MyString
+  loan_foreclosure_or_judgement_indicator: false
+  outstanding_judgements_indicator: false
+  party_to_lawsuit_indicator: false
+  presently_delinquent_indicator: false
+  prior_property_title_type: MyString
+  prior_property_usage_type: MyString
+  property_foreclosed_past_seven_years_indicator: false
+  borrower_first_time_homebuyer_indicator: false

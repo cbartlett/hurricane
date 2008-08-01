@@ -1,0 +1,48 @@
+<p>
+  <b>Street address:</b>
+  <%=h @borrower_residence.street_address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @borrower_residence.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @borrower_residence.state %>
+</p>
+
+<p>
+  <b>Postal code:</b>
+  <%=h @borrower_residence.postal_code %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @borrower_residence.country %>
+</p>
+
+<p>
+  <b>Borrower residency basis:</b>
+  <%=h @borrower_residence.borrower_residency_basis %>
+</p>
+
+<p>
+  <b>Borrower residency duration months:</b>
+  <%=h @borrower_residence.borrower_residency_duration_months %>
+</p>
+
+<p>
+  <b>Borrower residency duration years:</b>
+  <%=h @borrower_residence.borrower_residency_duration_years %>
+</p>
+
+<p>
+  <b>Borrower residency type:</b>
+  <%=h @borrower_residence.borrower_residency_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_borrower_residence_path(@borrower_residence) %> |
+<%= link_to 'Back', borrower_residences_path %>

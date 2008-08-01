@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  mortgage_type: MyString
+  other_mortgage_type_description: MyString
+  agency_case_identifier: 1
+  lender_case_identifier: 1
+  borrower_requested_loan_amount: 9.99
+  base_loan_amount: 9.99
+  requested_interest_rate_percent: 9.99
+  loan_amortization_term_months: 1
+  loan_amortization_type: MyString
+  other_amortization_type_description: MyString
+two:
+  id: 2
+  mortgage_type: MyString
+  other_mortgage_type_description: MyString
+  agency_case_identifier: 1
+  lender_case_identifier: 1
+  borrower_requested_loan_amount: 9.99
+  base_loan_amount: 9.99
+  requested_interest_rate_percent: 9.99
+  loan_amortization_term_months: 1
+  loan_amortization_type: MyString
+  other_amortization_type_description: MyString

@@ -1,0 +1,58 @@
+<%= '<li id="' + dom_id(liability) + '">'%>
+	<%= error_messages_for :liability %>
+	
+	<% if liability.new_record? %>
+		<% remote_form_for(:liability, liability, :url => liabilities_path) do |f| %>
+			<p>
+				<%= f.select :liability_type, Liability::LIABILITYTYPE %>
+				<%= f.text_field :holder_name %>
+				<%= f.text_field :holder_street_address %>
+				<%= f.text_field :holder_city %>
+				<%= f.text_field :holder_state %>
+				<%= f.text_field :holder_postal_code %>
+				<%= f.text_field :account_identifier %>
+				<%= f.text_field :monthly_payment_amount %>
+				<%= f.text_field :remaining_term_months %>
+				<%= f.text_field :unpaid_balance_amount %>
+				<%= f.check_box :payoff_status_indicator %>
+				<%= f.check_box :exclusion_indicator %>
+				<%= f.check_box :payoff_with_current_assets_indicator %>
+				<%= f.text_field :alimony_owed_to_name %>
+				<%= f.check_box :subject_loan_resubordination_indicator %>
+			
+			    <%= submit_tag "Update" %>
+		    </p>
+		<% end %>
+	<% else %>
+		<% remote_form_for(:liability, liability, :url => liability_path(liability), :html => { :method => :put }) do |f| %>
+	    	<p>
+				<%= f.select :liability_type, Liability::LIABILITYTYPE %>
+				<%= f.text_field :holder_name %>
+				<%= f.text_field :holder_street_address %>
+				<%= f.text_field :holder_city %>
+				<%= f.text_field :holder_state %>
+				<%= f.text_field :holder_postal_code %>
+				<%= f.text_field :account_identifier %>
+				<%= f.text_field :monthly_payment_amount %>
+				<%= f.text_field :remaining_term_months %>
+				<%= f.text_field :unpaid_balance_amount %>
+				<%= f.check_box :payoff_status_indicator %>
+				<%= f.check_box :exclusion_indicator %>
+				<%= f.check_box :payoff_with_current_assets_indicator %>
+				<%= f.text_field :alimony_owed_to_name %>
+				<%= f.check_box :subject_loan_resubordination_indicator %>
+			
+			    <%= submit_tag "Update" %>
+		    </p>
+		<% end %>
+	<% end %>
+
+	<% if liability.new_record? %>
+
+		<a href="#" onclick="if (confirm('Are you sure?')) { Element.remove('new_liability'); Element.show('add_liability_link'); }; return false;">Delete</a>
+
+	<% else %>
+	
+		<%= (link_to_remote 'Delete', :url => liability_path(liability), :confirm => 'Are you sure?', :method => :delete) unless liability.new_record?  %>
+	<% end %>
+</li>

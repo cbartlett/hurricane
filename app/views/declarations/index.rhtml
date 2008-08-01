@@ -1,0 +1,48 @@
+<h1>Listing declarations</h1>
+
+<table>
+  <tr>
+    <th>Alimony child support obligation indicator</th>
+    <th>Bankruptcy indicator</th>
+    <th>Borrowed down payment indicator</th>
+    <th>Citizenship residency type</th>
+    <th>Co maker endorser of note indicator</th>
+    <th>Homeowner past three years type</th>
+    <th>Intent to occupy type</th>
+    <th>Loan foreclosure or judgement indicator</th>
+    <th>Outstanding judgements indicator</th>
+    <th>Party to lawsuit indicator</th>
+    <th>Presently delinquent indicator</th>
+    <th>Prior property title type</th>
+    <th>Prior property usage type</th>
+    <th>Property foreclosed past seven years indicator</th>
+    <th>Borrower first time homebuyer indicator</th>
+  </tr>
+  
+<% for declaration in @declarations %>
+  <tr>
+    <td><%=h declaration.alimony_child_support_obligation_indicator %></td>
+    <td><%=h declaration.bankruptcy_indicator %></td>
+    <td><%=h declaration.borrowed_down_payment_indicator %></td>
+    <td><%=h declaration.citizenship_residency_type %></td>
+    <td><%=h declaration.co_maker_endorser_of_note_indicator %></td>
+    <td><%=h declaration.homeowner_past_three_years_type %></td>
+    <td><%=h declaration.intent_to_occupy_type %></td>
+    <td><%=h declaration.loan_foreclosure_or_judgement_indicator %></td>
+    <td><%=h declaration.outstanding_judgements_indicator %></td>
+    <td><%=h declaration.party_to_lawsuit_indicator %></td>
+    <td><%=h declaration.presently_delinquent_indicator %></td>
+    <td><%=h declaration.prior_property_title_type %></td>
+    <td><%=h declaration.prior_property_usage_type %></td>
+    <td><%=h declaration.property_foreclosed_past_seven_years_indicator %></td>
+    <td><%=h declaration.borrower_first_time_homebuyer_indicator %></td>
+    <td><%= link_to 'Show', declaration_path(declaration) %></td>
+    <td><%= link_to 'Edit', edit_declaration_path(declaration) %></td>
+    <td><%= link_to 'Destroy', declaration_path(declaration), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New declaration', new_declaration_path %>

@@ -1,0 +1,46 @@
+<%= '<li id="' + dom_id(borrower_residence) + '">'%>
+	<%= error_messages_for :borrower_residence %>
+	
+	<% if borrower_residence.new_record? %>
+		<% remote_form_for(:borrower_residence, borrower_residence, :url => borrower_residences_path) do |f| %>
+	    	<p>
+				<%= f.text_field :street_address %>
+				<%= f.text_field :city %>
+				<%= f.text_field :state %>
+				<%= f.text_field :postal_code %>
+				<%= f.text_field :country %>
+				<%= f.select(:borrower_residency_basis, BorrowerResidence::BORROWER_RESIDENCY_BASIS_TYPE) %>
+				<%= f.text_field :borrower_residency_duration_months %>
+				<%= f.text_field :borrower_residency_duration_years %>
+				<%= f.select(:borrower_residency_type, BorrowerResidence::BORROWER_RESIDENCY_TYPE) %>
+			
+			    <%= submit_tag "Update" %>
+		    </p>
+		<% end %>
+	<% else %>
+		<% remote_form_for(:borrower_residence, borrower_residence, :url => borrower_residence_path(borrower_residence), :html => { :method => :put }) do |f| %>
+	    	<p>
+				<%= f.text_field :street_address %>
+				<%= f.text_field :city %>
+				<%= f.text_field :state %>
+				<%= f.text_field :postal_code %>
+				<%= f.text_field :country %>
+				<%= f.select(:borrower_residency_basis, BorrowerResidence::BORROWER_RESIDENCY_BASIS_TYPE) %>
+				<%= f.text_field :borrower_residency_duration_months %>
+				<%= f.text_field :borrower_residency_duration_years %>
+				<%= f.select(:borrower_residency_type, BorrowerResidence::BORROWER_RESIDENCY_TYPE) %>
+			
+			    <%= submit_tag "Update" %>
+		    </p>
+		<% end %>
+	<% end %>
+
+	<% if borrower_residence.new_record? %>
+
+		<a href="#" onclick="if (confirm('Are you sure?')) { Element.remove('new_borrower_residence'); Element.show('add_borrower_residence_link'); }; return false;">Delete</a>
+
+	<% else %>
+	
+		<%= (link_to_remote 'Delete', :url => borrower_residence_path(borrower_residence), :confirm => 'Are you sure?', :method => :delete) unless borrower_residence.new_record?  %>
+	<% end %>
+</li>

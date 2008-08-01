@@ -1,0 +1,244 @@
+body {
+  font-family:helvetica,arial,sans-serif;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  background-color: #D9D9C3;
+}
+
+#banner {
+  text-align: center;
+  height: 49px;
+  background: url(../images/cloudeye.jpg) no-repeat left;
+}
+
+#sectionNav {
+  float: left;
+  width: 18%;
+  background-color: #bfbfac;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0.75em;
+  padding-right: 0.25em;
+}
+
+#sectionNav h2 {
+  font-size: 100%;
+  text-align: center;
+  color: #808073;
+}
+
+#finis {
+  background: url(../images/tree.jpg) no-repeat;
+  background-position: 100% -610px;
+  color: #fcf6cf;
+}
+
+label { 
+  display: block;
+  float: left;
+  clear: left;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+width: 50%;
+text-align: right;
+}
+
+input[type="radio"] {
+  text-align: left;
+  float: none;
+} 
+input[type="checkbox"] {
+  text-align: left;
+  float: left;
+}
+
+input[type="radio"] + label, input[type="checkbox"] + label {
+display: inline;
+float: none;
+text-align: left;
+clear: none;
+  width: auto;
+}
+
+input[type="checkbox"].mooter {
+  float: left;
+  clear: left;
+}
+
+input[type="checkbox"].mooter + label{
+  float: left;
+}
+
+input[type="checkbox"].mooter:checked + label + fieldset,
+input[type="checkbox"].mooter:checked + fieldset {
+  display: none;
+}
+
+input[type="checkbox"].mooter + label + fieldset {
+  display: block;
+}
+
+input {
+  margin-right: 0.5em;
+float: left;
+}
+
+input + label > span.hint {
+  display: none;
+  font-size: 75%;
+  background-color: #fcf6cf;
+  border: 1px #f1edc2 solid;
+}
+
+input:focus + label > span.hint {
+  display: inline;
+}
+
+#type_OtherExplanation {
+  width: 36em;
+float: left;
+}
+
+fieldset.urlaSection fieldset, ul.nav, fieldset.urlaSection p {
+  clear: left;
+}
+
+fieldset.urlaSection {
+  border: 0px solid #808073;
+  background-color: #ffffe6;
+ /* float: right;
+  clear: none; */
+float: left;
+  width: 76%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+fieldset.urlaSection > legend {
+  margin-top: 0em;
+border: none;
+padding: 0.25em;
+  width: 100%;
+  background-color: #808073;
+  color: white;
+  text-align: center;
+}
+
+fieldset.urlaSection fieldset {
+  border: none;
+  border-top: 1px solid #bfbab0;
+}
+
+fieldset.urlaSection .urlaSubsection {
+  border: 1px solid #bfbab0;
+}
+
+fieldset fieldset legend {  
+  background-color: transparent;
+  color: black;
+  border: none;
+}
+
+#mortgType label, #amortType label, #ethnicity label, #sex  label {
+/* inline fieldsets */
+/*  clear: none; */
+}
+
+h1 {
+  color:#900;
+  font-size: 120%;
+}
+
+ul.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#sectionNav ul {
+  margin-left: 0.5em;
+  padding: 0;
+  list-style: none;
+}
+
+#sectionNav li {
+  font-size: 60%;
+}
+
+#sectionNav ul li a, ul.nav li a {
+  text-decoration: none;
+}
+
+#sectionNav ul li a:hover, ul.nav li a:hover {
+  text-decoration: underline;
+}
+
+ul.nav li {
+  float: left;
+/*  padding-right: 1em; */
+  margin-top: 0.25em;
+  margin-right: 0.5em; 
+/*   border-right: solid 1px blue;
+  border-bottom: solid 1px blue; */
+  padding-bottom: 0.25em;
+}
+
+ul.nav li a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  text-indent: -900px;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+ul.nav li a:hover {
+  border-color: #bfbfac;  
+}
+
+ul.nav li a.prev {
+  background: url(../images/resultset_previous.png) no-repeat left;
+}
+
+ul.nav li a.next {
+  background: url(../images/resultset_next.png) no-repeat right;
+}
+
+ul.nav li a.top {
+  background: url(../images/resultset_first.png) no-repeat left;
+}
+
+a.add {
+  background: url(../images/page_add.png) no-repeat left;
+}
+
+a.delete {
+  background: url(../images/page_delete.png) no-repeat left;
+}
+
+/* Specific rules: */
+
+#type_Other {
+  display: block;
+  float: left;
+  clear: left;
+}
+
+#type_Other + label {
+  display: block;
+  float: left;
+  clear: none;
+  text-align: left;
+  width: auto;
+}
+
+#type_OtherExplanation {
+  display: none;
+}
+
+#type_Other:checked + label + #type_OtherExplanation {
+  display: block;
+  float: left;
+  clear: none;
+}

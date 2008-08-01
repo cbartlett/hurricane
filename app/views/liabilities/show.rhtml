@@ -1,0 +1,78 @@
+<p>
+  <b>Holder street address:</b>
+  <%=h @liability.holder_street_address %>
+</p>
+
+<p>
+  <b>Holder city:</b>
+  <%=h @liability.holder_city %>
+</p>
+
+<p>
+  <b>Holder state:</b>
+  <%=h @liability.holder_state %>
+</p>
+
+<p>
+  <b>Holder postal code:</b>
+  <%=h @liability.holder_postal_code %>
+</p>
+
+<p>
+  <b>Alimony owed to name:</b>
+  <%=h @liability.alimony_owed_to_name %>
+</p>
+
+<p>
+  <b>Account identifier:</b>
+  <%=h @liability.account_identifier %>
+</p>
+
+<p>
+  <b>Exclusion indicator:</b>
+  <%=h @liability.exclusion_indicator %>
+</p>
+
+<p>
+  <b>Holder name:</b>
+  <%=h @liability.holder_name %>
+</p>
+
+<p>
+  <b>Monthly payment amount:</b>
+  <%=h @liability.monthly_payment_amount %>
+</p>
+
+<p>
+  <b>Payoff status indicator:</b>
+  <%=h @liability.payoff_status_indicator %>
+</p>
+
+<p>
+  <b>Payoff with current assets indicator:</b>
+  <%=h @liability.payoff_with_current_assets_indicator %>
+</p>
+
+<p>
+  <b>Remaining term months:</b>
+  <%=h @liability.remaining_term_months %>
+</p>
+
+<p>
+  <b>Liability type:</b>
+  <%=h @liability.liability_type %>
+</p>
+
+<p>
+  <b>Unpaid balance amount:</b>
+  <%=h @liability.unpaid_balance_amount %>
+</p>
+
+<p>
+  <b>Subject loan resubordination indicator:</b>
+  <%=h @liability.subject_loan_resubordination_indicator %>
+</p>
+
+
+<%= link_to 'Edit', edit_liability_path(@liability) %> |
+<%= link_to 'Back', liabilities_path %>

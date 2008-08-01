@@ -1,0 +1,2 @@
+page[dom_id(@reo_property)].visual_effect(:blind_up)
+page.remove(dom_id(@reo_property))

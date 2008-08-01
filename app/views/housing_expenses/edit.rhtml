@@ -1,0 +1,138 @@
+<h1>Combined Monthly Housing Expense</h1>
+
+<%= error_messages_for :housing_expense %>
+
+<script type="text/javascript">
+	function check_num(name){
+		//alert(name);
+		var field = document.getElementById(name);
+		//alert(field.value);
+		if(isNaN(field.value))
+		{
+			//alert("in if");
+			alert( field.value + " is not a numeric value. Please remove all alpha characters and commas");
+			field.value="";
+		}
+		//alert("in else");
+		calc_present_expenses();
+	}
+	function calc_present_expenses(){
+		var a = document.getElementById("housing_expense_present_rent_amount").value;
+		var b = document.getElementById("housing_expense_present_first_mortgage_principal_and_interest_amount").value;
+		var c = document.getElementById("housing_expense_present_hazard_insurance_amount").value;
+		var d = document.getElementById("housing_expense_present_homeowners_association_dues_and_condominium_fees_amount").value;
+		var e = document.getElementById("housing_expense_present_mi_amount").value;
+		var f = document.getElementById("housing_expense_present_other_housing_expense_amount").value;
+		var g = document.getElementById("housing_expense_present_other_mortgage_loan_principal_and_interest_amount").value; 
+		var h = document.getElementById("housing_expense_present_real_estate_tax_amount").value; 
+		
+		var sum = eval((a*1)+(b*1)+(c*1)+(d*1)+(e*1)+(f*1)+(g*1)+(h*1)).toFixed(2);
+		var total = document.getElementById("housing_expense_present_total_amount");
+		total.value = sum;
+		//total.innerHTML = sum;
+		//alert(sum);
+	}
+</script>
+
+<% form_for(:housing_expense, :url => housing_expense_path(@housing_expense), :html => { :method => :put }) do |f| %>
+	
+		<table>
+   		<tr>
+   		<td></td>
+		<th>Present</th>     	
+    	<th>Proposed</th>
+		</tr>  
+
+		<tr>
+   		<td>Rent</td>
+		<td>$&nbsp;<%= f.text_field :present_rent_amount, :size => 7, :columns => 7 %></td>     	
+    	<td  bgcolor=#CACCCD></td>
+			<%= observe_field 	:housing_expense_present_rent_amount,
+								:function => "check_num('housing_expense_present_rent_amount')" %>
+	    <!-- 
+		 proposed rent n/a?
+		<%= f.text_field :proposed_ground_rent_amount, :size => 7, :columns => 7 %>
+		-->
+		</tr>
+
+		<tr>
+   		<td>First Mortgage (P&I)</td>
+		<td>$&nbsp;<%= f.text_field :present_first_mortgage_principal_and_interest_amount, :size => 7, :columns => 7 %></td>     	
+    		<%= observe_field 	:housing_expense_present_first_mortgage_principal_and_interest_amount,
+								:function => "check_num('housing_expense_present_first_mortgage_principal_and_interest_amount')" %>
+		<td><%= f.text_field :proposed_first_mortgage_principal_and_interest_amount, :size => 7, :columns => 7 %></td>
+		</tr>
+			
+				<%= observe_field 	:housing_expense_proposed_first_mortgage_principal_and_interest_amount,
+							:frequency => 0.5,
+							:update => 'proposed_total',
+							:before => "Element.show('spinner')",
+							:complete => "Element.hide('spinner')",
+							:url => {:action=>'proposed_expense_total', :only_path=> false},
+							:with => "'housing_expense_proposed_first_mortgage_principal_and_interest_amount=' + value" %>
+
+		<tr>
+   		<td>Other (P&I)</td>
+		<td>$&nbsp;<%= f.text_field :present_other_mortgage_loan_principal_and_interest_amount, :size => 7, :columns => 7 %></td>     	
+    		<%= observe_field 	:housing_expense_present_other_mortgage_loan_principal_and_interest_amount,
+								:function => "check_num('housing_expense_present_other_mortgage_loan_principal_and_interest_amount')" %>
+		<td><%= f.text_field :proposed_other_mortgage_loan_principal_and_interest_amount, :size => 7, :columns => 7 %></td>
+		</tr>
+		
+		<tr>
+   		<td>Hazard Insurance</td>
+		<td>$&nbsp;<%= f.text_field :present_hazard_insurance_amount, :size => 7, :columns => 7 %></td>     	
+    	    <%= observe_field 	:housing_expense_present_hazard_insurance_amount,
+								:function => "check_num('housing_expense_present_hazard_insurance_amount')" %>
+
+		<td><%= f.text_field :proposed_hazard_insurance_amount, :size => 7, :columns => 7 %></td>
+		</tr>
+
+		<tr>
+   		<td>Real Estate Taxes</td>
+		<td>$&nbsp;<%= f.text_field :present_real_estate_tax_amount, :size => 7, :columns => 7 %></td>     	
+    	    <%= observe_field 	:housing_expense_present_real_estate_tax_amount,
+								:function => "check_num('housing_expense_present_real_estate_tax_amount')" %>
+    	<td><%= f.text_field :proposed_real_estate_tax_amount, :size => 7, :columns => 7 %></td>
+		</tr>
+
+		<tr>
+   		<td>Mortgage Insurance</td>
+		<td>$&nbsp;<%= f.text_field :present_mi_amount, :size => 7, :columns => 7 %></td>     	
+    	    <%= observe_field 	:housing_expense_present_mi_amount,
+								:function => "check_num('housing_expense_present_mi_amount')" %>
+     	
+		<td><%= f.text_field :proposed_mi_amount, :size => 7, :columns => 7 %></td>
+		</tr>
+
+		<tr>
+   		<td>Homeowners Association Dues</td>
+		<td>$&nbsp;<%= f.text_field :present_homeowners_association_dues_and_condominium_fees_amount, :size => 7, :columns => 7 %></td>     	
+    	    <%= observe_field 	:housing_expense_present_homeowners_association_dues_and_condominium_fees_amount,
+								:function => "check_num('housing_expense_present_homeowners_association_dues_and_condominium_fees_amount')" %>
+		<td><%= f.text_field :proposed_homeowners_association_dues_and_condominium_fees_amount, :size => 7, :columns => 7 %></td>
+		</tr>
+		
+		<tr>
+   		<td>Other Housing Expense</td>
+		<td>$&nbsp;<%= f.text_field :present_other_housing_expense_amount, :size => 7, :columns => 7 %></td>     	
+    	    <%= observe_field 	:housing_expense_present_other_housing_expense_amount,
+								:function => "check_num('housing_expense_present_other_housing_expense_amount')" %>
+    	<td><%= f.text_field :proposed_other_housing_expense_amount, :size => 7, :columns => 7 %></td>
+		</tr>
+		
+		<tr>
+		<td>Total</td>	
+   		<td>$&nbsp;<%= f.text_field :present_total_amount, :size => 7, :columns => 7, :readonly => true %></td>
+<!--
+		<td>$&nbsp;<%= render :partial => "present_expense_total" %></td>-->
+   		<td><%= render :partial => "proposed_expense_total" %></td>		
+		</tr>
+		</table>
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', housing_expense_path(@housing_expense) %> |
+<%= link_to 'Back', housing_expenses_path %>

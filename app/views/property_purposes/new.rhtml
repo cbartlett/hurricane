@@ -1,0 +1,31 @@
+<h1>Property Information and Purpose of Loan</h1>
+
+<%= error_messages_for :property_purpose %>
+<table>
+  <tr>
+    <th>Street address</th>
+    <th>Street address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postal code</th>
+    <th>Financed number of units</th>
+    <th>Property legal description</th>
+    <th>Structure built year</th>
+    <th>Loan purpose</th>
+    <th>Property usage type</th>
+    <th>Property acquired year</th>
+    <th>Property original cost amount</th>
+    <th>Property existing lien amount</th>
+    <th>GSE refinance purpose</th>
+    <th>Refinance improvements type</th>
+    <th>Construction improvement costs amount</th>
+    <th>GSE title held in names</th>
+    <th>Property rights type</th>
+    <th>GSE title manner held desc</th>
+    <th>Down payment source desc</th>
+  </tr>
+</table>
+
+<ul id="property_purpose_list">
+  <%= render(:partial => "property_purpose") %>
+</ul>

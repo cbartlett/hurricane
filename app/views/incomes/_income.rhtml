@@ -1,0 +1,27 @@
+<%= '<li id="' + dom_id(income) + '">'%>
+	<%= error_messages_for :income %>
+	
+	<% if income.new_record? %>
+		<% remote_form_for(:income, income, :url => incomes_path) do |f| %>
+			<%= f.select(:income_type, Income::INCOMETYPE)  %>
+		    <%= f.text_field :monthly_total_amount  %>
+			
+			<%= submit_tag "Update" %>
+		<% end %>
+	<% else %>
+		<% remote_form_for(:income, income, :url => income_path(income), :html => { :method => :put }) do |f| %>
+			<%= f.select(:income_type, Income::INCOMETYPE)  %>
+		    <%= f.text_field :monthly_total_amount  %>
+			
+			<%= submit_tag "Update" %>
+		<% end %>
+	<% end %>
+	<% if income.new_record? %>
+
+		<a href="#" onclick="if (confirm('Are you sure?')) { Element.remove('new_income'); Element.show('add_income_link'); }; return false;">Delete</a>
+
+	<% else %>
+	
+		<%= (link_to_remote 'Delete', :url => income_path(income), :confirm => 'Are you sure?', :method => :delete) unless income.new_record?  %>
+	<% end %>
+</li>

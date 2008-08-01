@@ -1,0 +1,54 @@
+<%= '<li id="' + dom_id(reo_property) + '">'%>
+	<%= error_messages_for :reo_property %>
+	
+	<% if reo_property.new_record? %>
+		<% remote_form_for(:reo_property, reo_property, :url => reo_properties_path) do |f| %>
+			<p>
+				<%= f.text_field :street_address %>
+				<%= f.text_field :street_address2 %>
+				<%= f.text_field :city %>
+				<%= f.text_field :state %>
+				<%= f.text_field :postal_code %>
+				<%= f.select :disposition_status, REOProperty::DISPOSITIONSTATUSTYPE %>
+				<%= f.select :gse_property_type,  REOProperty::GSEPROPERTYTYPE %>
+				<%= f.text_field :market_value_amount %>
+				<%= f.text_field :lien_upb_amount %>
+				<%= f.text_field :rental_income_gross_amount %>
+				<%= f.text_field :lien_installment_amount %>
+				<%= f.text_field :maintenance_expense_amount %>
+				<%= f.text_field :rental_income_net_amount %>
+			
+			    <%= submit_tag "Update" %>
+		    </p>
+		<% end %>
+	<% else %>
+		<% remote_form_for(:reo_property, reo_property, :url => reo_property_path(reo_property), :html => { :method => :put }) do |f| %>
+	    	<p>
+				<%= f.text_field :street_address %>
+				<%= f.text_field :street_address2 %>
+				<%= f.text_field :city %>
+				<%= f.text_field :state %>
+				<%= f.text_field :postal_code %>
+				<%= f.select :disposition_status, REOProperty::DISPOSITIONSTATUSTYPE %>
+				<%= f.select :gse_property_type,  REOProperty::GSEPROPERTYTYPE %>
+				<%= f.text_field :market_value_amount %>
+				<%= f.text_field :lien_upb_amount %>
+				<%= f.text_field :rental_income_gross_amount %>
+				<%= f.text_field :lien_installment_amount %>
+				<%= f.text_field :maintenance_expense_amount %>
+				<%= f.text_field :rental_income_net_amount %>
+			
+			    <%= submit_tag "Update" %>
+		    </p>
+		<% end %>
+	<% end %>
+
+	<% if reo_property.new_record? %>
+
+		<a href="#" onclick="if (confirm('Are you sure?')) { Element.remove('new_reo_property'); Element.show('add_reo_property_link'); }; return false;">Delete</a>
+
+	<% else %>
+	
+		<%= (link_to_remote 'Delete', :url => reo_property_path(reo_property), :confirm => 'Are you sure?', :method => :delete) unless reo_property.new_record?  %>
+	<% end %>
+</li>

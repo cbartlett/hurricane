@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	  <title>Uniform Residential Loan Application</title>
+	  <%= stylesheet_link_tag "urla", :rel => "alternate stylesheet", :title => "Jeff 1", :media => "all" %>
+	  <%= stylesheet_link_tag "urla_late", :rel => "alternate stylesheet", :title => "Don Orig", :media => "all" %>
+	  <%= stylesheet_link_tag "urla2", :title => "Jeff 2", :media => "all" %>
+	  <%= javascript_include_tag :defaults %>
+	</head>
+	<body id="urla">
+	  <div id="banner">
+	  <table height="15px" width=100%>
+	   	<tr valign=center>
+	   	<td width=30 align=center><%= image_tag("hurricane_trans.gif")%></td>
+		<td valign=baseline align=left width=135><h2>Hurricane 1003</h2></td>	
+	    <td valign=baseline align=center><h3><%= @page_title || "Uniform Residential Loan Application" %></h3></td>
+	    <td align=left width=135 valign=baseline><h6><table><tr><td>Category:</td><td>Tropical</td></tr><tr><td>Last Modified:</td><td><%= Time.now.strftime('%m/%d/%Y') %></td></tr></table></h6></td>
+	  	</tr>
+	  </table>
+	  </div>
+	  <div id="sectionNav">	
+		<h2>Loan Section</h2>
+		<ul>
+	   		<li><a href="/mortgage_terms/new">Type of Mortgage and Terms of Loan</a></li>
+	   		<li><a href="/property_purposes">Property Information and Purpose of Loan</a></li>
+			<li><a href="/borrowers/new">Borrower Information</a></li>
+	   		<li><a href="/employers">Employment Information</a></li>
+	   		<li><a href="/housing_expenses/new">Combined Housing Expense</a></li>
+	   		<li><a href="/incomes">Monthly Income</a></li>
+	   		<li><a href="/assets">Assets</a></li>
+	   		<li><a href="/liabilities">Liabilities</a></li>
+	   		<li><a href="/reo_properties">Real Estate Owned</a></li>
+	   		<li><a href="/transaction_details/new">Details of Transaction</a></li>
+	   		<li><a href="/declarations/new">Declarations</a>
+	   		<li><a href="/government_monitorings/new">Government Monitoring</a></li>
+		</ul>
+	  </div>
+	  <div id="main">
+		<% if flash[:notice] -%>
+			<div id="notice"><%= flash[:notice] %></div>
+		<% end -%>
+		<%= yield :layout %>
+	  </div>
+	</body>
+</html>

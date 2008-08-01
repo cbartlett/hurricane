@@ -1,0 +1,56 @@
+<h1>New borrower_residence</h1>
+
+<%= error_messages_for :borrower_residence %>
+
+<% form_for(:borrower_residence, :url => borrower_residences_path) do |f| %>
+  <p>
+    <b>Street address</b><br />
+    <%= f.text_field :street_address %>
+  </p>
+
+  <p>
+    <b>City</b><br />
+    <%= f.text_field :city %>
+  </p>
+
+  <p>
+    <b>State</b><br />
+    <%= f.text_field :state %>
+  </p>
+
+  <p>
+    <b>Postal code</b><br />
+    <%= f.text_field :postal_code %>
+  </p>
+
+  <p>
+    <b>Country</b><br />
+    <%= f.text_field :country %>
+  </p>
+
+  <p>
+    <b>Borrower residency basis</b><br />
+    <%= f.text_field :borrower_residency_basis %>
+  </p>
+
+  <p>
+    <b>Borrower residency duration months</b><br />
+    <%= f.text_field :borrower_residency_duration_months %>
+  </p>
+
+  <p>
+    <b>Borrower residency duration years</b><br />
+    <%= f.text_field :borrower_residency_duration_years %>
+  </p>
+
+  <p>
+    <b>Borrower residency type</b><br />
+    <%= f.text_field :borrower_residency_type %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', borrower_residences_path %>

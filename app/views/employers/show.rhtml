@@ -1,0 +1,63 @@
+<p>
+  <b>Name:</b>
+  <%=h @employer.name %>
+</p>
+
+<p>
+  <b>Street address:</b>
+  <%=h @employer.street_address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @employer.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @employer.state %>
+</p>
+
+<p>
+  <b>Postal code:</b>
+  <%=h @employer.postal_code %>
+</p>
+
+<p>
+  <b>Telephone number:</b>
+  <%=h @employer.telephone_number %>
+</p>
+
+<p>
+  <b>Time in line of work years:</b>
+  <%=h @employer.time_in_line_of_work_years %>
+</p>
+
+<p>
+  <b>Self employed indicator:</b>
+  <%=h @employer.self_employed_indicator %>
+</p>
+
+<p>
+  <b>Position description:</b>
+  <%=h @employer.position_description %>
+</p>
+
+<p>
+  <b>Income employment monthly amount:</b>
+  <%=h @employer.income_employment_monthly_amount %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%=h @employer.end_date %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%=h @employer.start_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_employer_path(@employer) %> |
+<%= link_to 'Back', employers_path %>

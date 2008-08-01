@@ -1,0 +1,86 @@
+<h1>New asset</h1>
+
+<%= error_messages_for :asset %>
+
+<% form_for(:asset, :url => assets_path) do |f| %>
+  <p>
+    <b>Borrower</b><br />
+    <%= f.check_box :borrower_id %>
+  </p>
+
+  <p>
+    <b>Co borrower</b><br />
+    <%= f.check_box :co_borrower_id %>
+  </p>
+
+  <p>
+    <b>Asset type</b><br />
+    <%= f.text_field :asset_type %>
+  </p>
+
+  <p>
+    <b>Other asset type description</b><br />
+    <%= f.text_field :other_asset_type_description %>
+  </p>
+
+  <p>
+    <b>Holder name</b><br />
+    <%= f.text_field :holder_name %>
+  </p>
+
+  <p>
+    <b>Holder street address</b><br />
+    <%= f.text_field :holder_street_address %>
+  </p>
+
+  <p>
+    <b>Holder city</b><br />
+    <%= f.text_field :holder_city %>
+  </p>
+
+  <p>
+    <b>Holder state</b><br />
+    <%= f.text_field :holder_state %>
+  </p>
+
+  <p>
+    <b>Holder postal code</b><br />
+    <%= f.text_field :holder_postal_code %>
+  </p>
+
+  <p>
+    <b>Account identifier</b><br />
+    <%= f.text_field :account_identifier %>
+  </p>
+
+  <p>
+    <b>Automobile make description</b><br />
+    <%= f.text_field :automobile_make_description %>
+  </p>
+
+  <p>
+    <b>Automobile model year</b><br />
+    <%= f.text_field :automobile_model_year %>
+  </p>
+
+  <p>
+    <b>Stock bond mutual fund share count</b><br />
+    <%= f.text_field :stock_bond_mutual_fund_share_count %>
+  </p>
+
+  <p>
+    <b>Life insurance face value amount</b><br />
+    <%= f.text_field :life_insurance_face_value_amount %>
+  </p>
+
+  <p>
+    <b>Cash or market value amount</b><br />
+    <%= f.text_field :cash_or_market_value_amount %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', assets_path %>

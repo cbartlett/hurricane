@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Uniform Residential Loan Application</title>
+  <%= stylesheet_link_tag "urla", :media => "all" %>
+  <%= javascript_include_tag :defaults %>
+</head>
+<body id="urla">
+  <div id="banner">
+    <%= image_tag("1003.png") %>
+    <%= @page_title || "Uniform Residential Loan Application" %><br />
+  </div>
+  <div id="columns">
+    <div id="side">
+    <h4>Loan Section</h4>	
+	  <a href="/declaration/">Declarations</a>&nbsp;<a href="http://www....">Help</a><br />
+      <a href="http://www..../faq">section 2</a><br />
+      <a href="http://www..../news">section 3</a><br />
+      <a href="http://www..../contact">section 4</a><br />
+    </div>
+    <div id="main">
+    	<% if flash[:notice] -%>
+			<div id="notice"><%= flash[:notice] %></div>
+			<% end -%>
+      <%= yield :layout %>
+    </div>
+  </div>
+</body>
+</html>

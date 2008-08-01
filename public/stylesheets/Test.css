@@ -1,0 +1,198 @@
+/* test wrapping form grid in table-like layout */
+
+.formGrid label, .formGrid input, .formGrid select, .formGrid a, .formGrid div  {
+  display: block;
+  float: left;
+  clear: none;
+  margin-left: 10px;
+}
+
+.formGrid .gridRow {
+  border: none;
+  border-top: 1px solid #e2e2e2;
+  margin: 0.5em 0 0 0;
+  padding-top: 0.25em;
+}
+
+.formGrid div  {
+  border: 1px solid #bfbfac;
+  overflow: hidden;
+}
+
+.formGrid div:hover  {
+  overflow: visible;
+  background: #fffdbd;
+}
+
+.formGrid label {
+  height: 2em;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 1px solid gray;
+  background: url(../images/gradbg22.jpg) repeat-x left;
+  overflow: hidden;
+}
+
+.formGrid a {
+  height: 18px;
+  text-indent: -900px;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.formGrid a:hover {
+  border-color: #bfbfac;  
+}
+
+a.delete {
+  background: url(../images/cross.png) no-repeat left;
+}
+
+a.save {
+  background: url(../images/accept.png) no-repeat left;
+}
+
+a.edit {
+  background: url(../images/application_form_edit.png) no-repeat left;
+}
+
+/* column widths */
+.formGrid .liabilityDelete {
+  clear: left;
+  margin-left: 0;
+}
+
+.formGrid .gridCtl {
+  margin-left: 0;
+  width: 18px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.formGrid label.gridCtl {
+  width: 16px;	/* *.gridCtl.width - 2 */
+}
+
+.formGrid .liabilityType {
+  margin-left: 0;
+  width: 220px;
+}
+
+.formGrid label.liabilityType {
+  width: 206px;	/* select.width - ( label.padding(left+right) + label.borderx2 ) */
+}
+
+.formGrid .liabilityHolderName {
+  width: 216px;
+}
+
+.formGrid label.liabilityHolderName {
+  width: 206px; /* input.width - 10 */
+}
+
+.formGrid .liabilityHolderStreet {
+  width: 246px;
+}
+
+.formGrid label.liabilityHolderStreet {
+  width: 236px;
+}
+
+.formGrid .liabilityHolderCity {
+  width: 148px;
+}
+
+.formGrid label.liabilityHolderCity {
+  width: 138px;
+}
+
+.formGrid .liabilityHolderSt {
+  width: 32px;
+}
+
+.formGrid label.liabilityHolderSt {
+  width: 22px;
+}
+
+.formGrid .liabilityHolderZip {
+  width: 88px;
+}
+
+.formGrid .liabilityHolderZip {
+  width: 78px;
+}
+
+.formGrid .liabilityAcctId {
+  width: 220px;
+}
+
+.formGrid label.liabilityAcctId {
+  width: 206px;
+}
+
+
+.formGrid .liabilityMonthlyPayment {
+  width: 175px;
+}
+
+.formGrid label.liabilityMonthlyPayment {
+  width: 165px;
+}
+
+.formGrid .liabilityRemaingingMo {
+  width: 160px;
+}
+
+.formGrid label.liabilityRemaingingMo {
+  width: 150px;
+}
+
+.formGrid .liabilityBalance {
+  width: 162px;
+}
+
+.formGrid label.liabilityBalance {
+  width: 152px;
+}
+
+.formGrid .liabilityPayoff {
+  width: 95px;
+}
+
+.formGrid label.liabilityPayoff {
+  width: 85px;
+}
+
+.formGrid .liabilityExclusion {
+  width: 74px;
+}
+
+.formGrid label.liabilityExclusion {
+  width: 64px;
+}
+
+.formGrid .liabilityPWCA {
+  width: 174px;
+}
+
+.formGrid label.liabilityPWCA {
+  width: 164px;
+}
+
+.formGrid .liabilityAlimonyOwed {
+  width: 220px;
+}
+
+.formGrid label.liabilityAlimonyOwed {
+  width: 210px;
+}
+
+.formGrid .liabilityResubord {
+  width: 220px;
+}
+
+.formGrid label.liabilityResubord {
+  width: 210px;
+}
+
+

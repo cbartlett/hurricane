@@ -1,0 +1,30 @@
+<h1>Assets</h1>
+
+<table>
+  <tr>
+    <th>Borrower</th>
+    <th>Co borrower</th>
+    <th>Asset type</th>
+    <th>Other asset type description</th>
+    <th>Holder name</th>
+    <th>Holder street address</th>
+    <th>Holder city</th>
+    <th>Holder state</th>
+    <th>Holder postal code</th>
+    <th>Account identifier</th>
+    <th>Automobile make description</th>
+    <th>Automobile model year</th>
+    <th>Stock bond mutual fund share count</th>
+    <th>Life insurance face value amount</th>
+    <th>Cash or market value amount</th>
+  </tr>
+</table>
+  
+<ul id="asset_list">
+  <%= render(:partial => "asset", :collection => @assets) %>
+</ul>
+
+
+<br />
+
+<%= link_to_remote 'New Asset', {:url => new_asset_path}, {:id => "add_asset_link" } %>

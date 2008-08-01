@@ -1,0 +1,53 @@
+<%= '<li id="' + dom_id(asset) + '">'%>
+	<%= error_messages_for :asset %>
+	
+	<% if asset.new_record? %>
+		<% remote_form_for(:asset, asset, :url => assets_path) do |f| %>
+		    <%= f.check_box :borrower_id  %>		
+		    <%= f.check_box :co_borrower_id  %>
+			<%= f.select(:asset_type, Asset::ASSETTYPE)  %>
+		    <%= f.text_field :other_asset_type_description  %>
+		    <%= f.text_field :holder_name  %>
+		    <%= f.text_field :holder_street_address  %>
+		    <%= f.text_field :holder_city  %>
+		    <%= f.text_field :holder_state  %>
+		    <%= f.text_field :holder_postal_code  %>
+		    <%= f.text_field :account_identifier  %>
+		    <%= f.text_field :automobile_make_description  %>
+		    <%= f.text_field :automobile_model_year  %>
+		    <%= f.text_field :stock_bond_mutual_fund_share_count  %>
+		    <%= f.text_field :life_insurance_face_value_amount  %>
+		    <%= f.text_field :cash_or_market_value_amount  %>
+			
+			<%= submit_tag "Update" %>
+		<% end %>
+	<% else %>
+		<% remote_form_for(:asset, asset, :url => asset_path(asset), :html => { :method => :put }) do |f| %>
+		    <%= f.check_box :borrower_id  %>		
+		    <%= f.check_box :co_borrower_id  %>
+			<%= f.select(:asset_type, Asset::ASSETTYPE)  %>
+		    <%= f.text_field :other_asset_type_description  %>
+		    <%= f.text_field :holder_name  %>
+		    <%= f.text_field :holder_street_address  %>
+		    <%= f.text_field :holder_city  %>
+		    <%= f.text_field :holder_state  %>
+		    <%= f.text_field :holder_postal_code  %>
+		    <%= f.text_field :account_identifier  %>
+		    <%= f.text_field :automobile_make_description  %>
+		    <%= f.text_field :automobile_model_year  %>
+		    <%= f.text_field :stock_bond_mutual_fund_share_count  %>
+		    <%= f.text_field :life_insurance_face_value_amount  %>
+		    <%= f.text_field :cash_or_market_value_amount  %>
+		
+			<%= submit_tag "Update" %>
+		<% end %>
+	<% end %>
+	<% if asset.new_record? %>
+
+		<a href="#" onclick="if (confirm('Are you sure?')) { Element.remove('new_asset'); Element.show('add_asset_link'); }; return false;">Delete</a>
+
+	<% else %>
+	
+		<%= (link_to_remote 'Delete', :url => asset_path(asset), :confirm => 'Are you sure?', :method => :delete) unless asset.new_record?  %>
+	<% end %>
+</li>

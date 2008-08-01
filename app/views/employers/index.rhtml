@@ -1,0 +1,26 @@
+<h1>Employers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Street address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postal code</th>
+    <th>Telephone number</th>
+    <th>Time in line of work years</th>
+    <th>Self employed indicator</th>
+    <th>Position description</th>
+    <th>Income employment monthly amount</th>
+    <th>End date</th>
+    <th>Start date</th>
+  </tr>
+ </table>
+
+<ul id="employer_list">
+  <%= render(:partial => "employer", :collection => @employers) %>
+</ul>  
+
+<br />
+
+<%= link_to_remote 'New Employer', {:url => new_employer_path}, {:id => "add_employer_link" } %>

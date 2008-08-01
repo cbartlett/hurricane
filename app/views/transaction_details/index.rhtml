@@ -1,0 +1,46 @@
+<h1>Listing transaction_details</h1>
+
+<table>
+  <tr>
+    <th>Alterations improvements and repairs amount</th>
+    <th>Borrower paid discount points total amount</th>
+    <th>Estimated closing costs amount</th>
+    <th>Mi and funding fee financed amount</th>
+    <th>Mi and fundingfee total amount</th>
+    <th>Prepaid items estimated amount</th>
+    <th>Purchase price amount</th>
+    <th>Refinance including debts to be paid off amount</th>
+    <th>Sales concession amount</th>
+    <th>Seller paid closing costs amount</th>
+    <th>Subordinate lien amount</th>
+    <th>Subordinate lien heloc amount</th>
+    <th>Fre reserve amount</th>
+    <th>Fre reserves amount</th>
+  </tr>
+  
+<% for transaction_detail in @transaction_details %>
+  <tr>
+    <td><%=h transaction_detail.alterations_improvements_and_repairs_amount %></td>
+    <td><%=h transaction_detail.borrower_paid_discount_points_total_amount %></td>
+    <td><%=h transaction_detail.estimated_closing_costs_amount %></td>
+    <td><%=h transaction_detail.mi_and_funding_fee_financed_amount %></td>
+    <td><%=h transaction_detail.mi_and_fundingfee_total_amount %></td>
+    <td><%=h transaction_detail.prepaid_items_estimated_amount %></td>
+    <td><%=h transaction_detail.purchase_price_amount %></td>
+    <td><%=h transaction_detail.refinance_including_debts_to_be_paid_off_amount %></td>
+    <td><%=h transaction_detail.sales_concession_amount %></td>
+    <td><%=h transaction_detail.seller_paid_closing_costs_amount %></td>
+    <td><%=h transaction_detail.subordinate_lien_amount %></td>
+    <td><%=h transaction_detail.subordinate_lien_heloc_amount %></td>
+    <td><%=h transaction_detail.fre_reserve_amount %></td>
+    <td><%=h transaction_detail.fre_reserves_amount %></td>
+    <td><%= link_to 'Show', transaction_detail_path(transaction_detail) %></td>
+    <td><%= link_to 'Edit', edit_transaction_detail_path(transaction_detail) %></td>
+    <td><%= link_to 'Destroy', transaction_detail_path(transaction_detail), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New transaction_detail', new_transaction_detail_path %>

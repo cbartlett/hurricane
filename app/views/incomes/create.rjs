@@ -1,0 +1,12 @@
+# need to delete the current (for now the one and only) new income
+
+page["new_income"].visual_effect(:blind_up)
+page.remove("new_income")
+
+# and then add this income back in (at the bottom for now)
+page.insert_html(:bottom, 'income_list', :partial => "income")
+page.visual_effect :highlight, 'income_list'
+
+# if the create is successful then re-enable (for now show) the "add new record" link
+
+page.show 'add_income_link' unless @income.errors.size > 0

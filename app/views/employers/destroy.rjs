@@ -1,0 +1,2 @@
+page[dom_id(@employer)].visual_effect(:blind_up)
+page.remove(dom_id(@employer))

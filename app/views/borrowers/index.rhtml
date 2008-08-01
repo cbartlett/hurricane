@@ -1,0 +1,46 @@
+<h1>Listing borrowers</h1>
+
+<table>
+  <tr>
+    <th>Borrower first name</th>
+    <th>Borrower middle name</th>
+    <th>Borrower last name</th>
+    <th>Borrower name suffix</th>
+    <th>Borrower application signed date</th>
+    <th>Borrower home telephone number</th>
+    <th>Borrower print position</th>
+    <th>Borrower ssn</th>
+    <th>Borrower birth date</th>
+    <th>Borrower unparsed name</th>
+    <th>Borrower dependent count</th>
+    <th>Joint asset liability reporting</th>
+    <th>Marital status</th>
+    <th>Schooling years</th>
+  </tr>
+  
+<% for borrower in @borrowers %>
+  <tr>
+    <td><%=h borrower.borrower_first_name %></td>
+    <td><%=h borrower.borrower_middle_name %></td>
+    <td><%=h borrower.borrower_last_name %></td>
+    <td><%=h borrower.borrower_name_suffix %></td>
+    <td><%=h borrower.borrower_application_signed_date %></td>
+    <td><%=h borrower.borrower_home_telephone_number %></td>
+    <td><%=h borrower.borrower_print_position %></td>
+    <td><%=h borrower.borrower_ssn %></td>
+    <td><%=h borrower.borrower_birth_date %></td>
+    <td><%=h borrower.borrower_unparsed_name %></td>
+    <td><%=h borrower.borrower_dependent_count %></td>
+    <td><%=h borrower.joint_asset_liability_reporting %></td>
+    <td><%=h borrower.marital_status %></td>
+    <td><%=h borrower.schooling_years %></td>
+    <td><%= link_to 'Show', borrower_path(@loan_application, borrower) %></td>
+    <td><%= link_to 'Edit', edit_borrower_path(@loan_application, borrower) %></td>
+    <td><%= link_to 'Destroy', borrower_path(@loan_application, borrower), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New borrower', new_borrower_path %>

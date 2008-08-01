@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  borrower_first_name: MyString
+  borrower_middle_name: MyString
+  borrower_last_name: MyString
+  borrower_name_suffix: MyString
+  borrower_application_signed_date: 2007-08-20
+  borrower_home_telephone_number: MyString
+  borrower_print_position: MyString
+  borrower_ssn: MyString
+  borrower_birth_date: MyString
+  borrower_unparsed_name: MyString
+  borrower_dependent_count: MyString
+  joint_asset_liability_reporting: MyString
+  marital_status: MyString
+  schooling_years: 1
+two:
+  id: 2
+  borrower_first_name: MyString
+  borrower_middle_name: MyString
+  borrower_last_name: MyString
+  borrower_name_suffix: MyString
+  borrower_application_signed_date: 2007-08-20
+  borrower_home_telephone_number: MyString
+  borrower_print_position: MyString
+  borrower_ssn: MyString
+  borrower_birth_date: MyString
+  borrower_unparsed_name: MyString
+  borrower_dependent_count: MyString
+  joint_asset_liability_reporting: MyString
+  marital_status: MyString
+  schooling_years: 1

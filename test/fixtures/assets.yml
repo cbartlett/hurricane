@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  borrower_id: false
+  co_borrower_id: false
+  asset_type: MyString
+  other_asset_type_description: MyString
+  holder_name: MyString
+  holder_street_address: MyString
+  holder_city: MyString
+  holder_state: MyString
+  holder_postal_code: 1
+  account_identifier: 1
+  automobile_make_description: MyString
+  automobile_model_year: 1
+  stock_bond_mutual_fund_share_count: 1
+  life_insurance_face_value_amount: 9.99
+  cash_or_market_value_amount: 9.99
+two:
+  id: 2
+  borrower_id: false
+  co_borrower_id: false
+  asset_type: MyString
+  other_asset_type_description: MyString
+  holder_name: MyString
+  holder_street_address: MyString
+  holder_city: MyString
+  holder_state: MyString
+  holder_postal_code: 1
+  account_identifier: 1
+  automobile_make_description: MyString
+  automobile_model_year: 1
+  stock_bond_mutual_fund_share_count: 1
+  life_insurance_face_value_amount: 9.99
+  cash_or_market_value_amount: 9.99

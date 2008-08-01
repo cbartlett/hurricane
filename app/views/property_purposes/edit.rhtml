@@ -1,0 +1,112 @@
+<h1>Editing property_purpose</h1>
+
+<%= error_messages_for :property_purpose %>
+
+<% form_for(:property_purpose, :url => property_purpose_path(@property_purpose), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Street address</b><br />
+    <%= f.text_field :street_address %>
+  </p>
+
+  <p>
+    <b>Street address2</b><br />
+    <%= f.text_field :street_address2 %>
+  </p>
+
+  <p>
+    <b>City</b><br />
+    <%= f.text_field :city %>
+  </p>
+
+  <p>
+    <b>State</b><br />
+    <%= f.text_field :state %>
+  </p>
+
+  <p>
+    <b>Postal code</b><br />
+    <%= f.text_field :postal_code %>
+  </p>
+
+  <p>
+    <b>Financed number of units</b><br />
+    <%= f.text_field :financed_number_of_units %>
+  </p>
+
+  <p>
+    <b>Property legal description</b><br />
+    <%= f.text_field :property_legal_description %>
+  </p>
+
+  <p>
+    <b>Structure built year</b><br />
+    <%= f.text_field :structure_built_year %>
+  </p>
+
+  <p>
+    <b>Loan purpose</b><br />
+    <%= f.text_field :loan_purpose %>
+  </p>
+
+  <p>
+    <b>Property usage type</b><br />
+    <%= f.text_field :property_usage_type %>
+  </p>
+
+  <p>
+    <b>Property acquired year</b><br />
+    <%= f.text_field :property_acquired_year %>
+  </p>
+
+  <p>
+    <b>Property original cost amount</b><br />
+    <%= f.text_field :property_original_cost_amount %>
+  </p>
+
+  <p>
+    <b>Property existing lien amount</b><br />
+    <%= f.text_field :property_existing_lien_amount %>
+  </p>
+
+  <p>
+    <b>Gse refinance purpose</b><br />
+    <%= f.text_field :gse_refinance_purpose %>
+  </p>
+
+  <p>
+    <b>Refinance improvements type</b><br />
+    <%= f.text_field :refinance_improvements_type %>
+  </p>
+
+  <p>
+    <b>Construction improvement costs amount</b><br />
+    <%= f.text_field :construction_improvement_costs_amount %>
+  </p>
+
+  <p>
+    <b>Gse title held in names</b><br />
+    <%= f.text_field :gse_title_held_in_names %>
+  </p>
+
+  <p>
+    <b>Property rights type</b><br />
+    <%= f.text_field :property_rights_type %>
+  </p>
+
+  <p>
+    <b>Gse title manner held desc</b><br />
+    <%= f.text_field :gse_title_manner_held_desc %>
+  </p>
+
+  <p>
+    <b>Down payment source desc</b><br />
+    <%= f.text_field :down_payment_source_desc %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', property_purpose_path(@property_purpose) %> |
+<%= link_to 'Back', property_purposes_path %>

@@ -1,0 +1,5 @@
+class TransactionDetail < ActiveRecord::Base
+
+  validates_numericality_of :alterations_improvements_and_repairs_amount, :borrower_paid_discount_points_total_amount, :estimated_closing_costs_amount, :mi_and_funding_fee_financed_amount, :mi_and_fundingfee_total_amount, :prepaid_items_estimated_amount, :purchase_price_amount, :refinance_including_debts_to_be_paid_off_amount, :seller_paid_closing_costs_amount, :subordinate_lien_amount
+
+end

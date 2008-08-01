@@ -1,0 +1,121 @@
+<h1>Details of Transaction</h1>
+
+<%= error_messages_for :transaction_detail %>
+
+<% form_for(:transaction_detail, :url => transaction_details_path) do |f| %>
+
+		<table>
+		<tr>
+   		<td>a. Purchase price</td>
+		<td>$&nbsp;<%= f.text_field :purchase_price_amount, :size => 7, :columns => 7 %></td>     	
+		</tr>
+
+		<tr>
+   		<td>b. Alterations, improvements, repairs</td>
+		<td>$&nbsp;<%= f.text_field :alterations_improvements_and_repairs_amount, :size => 7, :columns => 7 %></td>     	
+		</tr>
+
+		<tr>
+   		<td>c. Land</td>
+		<td>$&nbsp; No matching field</td>     	
+		</tr>
+
+		<tr>
+   		<td>d. Refinance (incl. debts to be paid off)</td>
+		<td>$&nbsp;<%= f.text_field :refinance_including_debts_to_be_paid_off_amount, :size => 7, :columns => 7 %></td>     	
+		</tr>
+
+		<tr>
+   		<td>e. Estimated prepaid items</td>
+		<td>$&nbsp;<%= f.text_field :prepaid_items_estimated_amount, :size => 7, :columns => 7 %></td>     	
+		</tr>
+
+		<tr>
+   		<td>f. Estimated closing costs</td>
+		<td>$&nbsp;<%= f.text_field :estimated_closing_costs_amount, :size => 7, :columns => 7 %></td>     	
+		</tr>
+
+		<tr>
+   		<td>g. PMI, MIP, Funding Fee</td>
+		<td>$&nbsp;<%= f.text_field :mi_and_fundingfee_total_amount, :size => 7, :columns => 7 %></td>     	
+		</tr>
+
+		<tr>
+   		<td>h. Discount (if Borrower paid)</td>
+		<td>$&nbsp;<%= f.text_field :borrower_paid_discount_points_total_amount, :size => 7, :columns => 7 %></td>     	
+		</tr>
+
+		<tr>
+   		<td>i. Total costs (items a through h)</td>
+		<td>$&nbsp;<label id="totalcosts"></label></td>     	
+		</tr>
+
+		<tr>
+   		<td>j. Subordinate financing</td>
+		<!-- check column name to ensure match -->
+		<td>$&nbsp;<%= f.text_field :subordinate_lien_amount, :size => 7, :columns => 7 %></td>     	
+		</tr>
+
+		<tr>
+   		<td>k. Borrower's closing costs paid by seller</td>
+		<td>$&nbsp;<%= f.text_field :seller_paid_closing_costs_amount, :size => 7, :columns => 7 %></td>     	
+		</tr>
+
+		<tr>
+   		<td>l. Other Credits (explain)</td>
+		<!-- Need to add separate explanation field here??? -->
+		<td>$&nbsp;No matching field</td>     	
+		</tr>
+		
+		<tr>
+   		<td>m. Loan amount (exclude PMI, MIP, Funding Fee financed)</td>
+		<td>$&nbsp;No matching field</td>     	
+		</tr>
+
+		<tr>
+   		<td>n. PMI, MIP, Funding Fee financed</td>
+		<td>$&nbsp;<%= f.text_field :mi_and_funding_fee_financed_amount, :size => 7, :columns => 7 %></td>     	
+		</tr>
+
+		<tr>
+   		<td>o. Loan amount (add m & n)</td>
+		<td>$&nbsp;No matching field</td>     	
+		</tr>
+
+		<tr>
+   		<td>p. Cash from/to Borrower (subtract j, k, l & o from i)</td>
+		<td>$&nbsp;No matching field</td>     	
+		</tr>
+
+		</table>
+
+ <!-- Additional fields not on form
+
+  <p>
+    <b>Sales concession amount</b><br />
+    <%= f.text_field :sales_concession_amount %>
+  </p>
+
+  <p>
+    <b>Subordinate lien heloc amount</b><br />
+    <%= f.text_field :subordinate_lien_heloc_amount %>
+  </p>
+
+   <p>
+   	Marked for Deprecation in MISMO...Not on form 
+    <b>Fre reserve amount</b><br />
+    <%= f.text_field :fre_reserve_amount %>
+  </p>
+
+  <p>
+    <b>Fre reserves amount</b><br />
+    <%= f.text_field :fre_reserves_amount %>
+  </p>
+-->
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', transaction_details_path %>

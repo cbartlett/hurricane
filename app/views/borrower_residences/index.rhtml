@@ -1,0 +1,23 @@
+<h1>Listing borrower_residences</h1>
+
+<table>
+  <tr>
+    <th>Street address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postal code</th>
+    <th>Country</th>
+    <th>Borrower residency basis</th>
+    <th>Borrower residency duration months</th>
+    <th>Borrower residency duration years</th>
+    <th>Borrower residency type</th>
+  </tr>
+</table>
+  
+<ul id="borrower_residence_list">
+  <%= render(:partial => "borrower_residence", :collection => @borrower_residences) %>
+</ul>  
+
+<br />
+
+<%= link_to_remote 'New residence', {:url => new_borrower_residence_path},  {:id => "add_borrower_residence_link" } %>

@@ -1,0 +1,2 @@
+page.insert_html(:bottom, 'property_purpose_list', :partial => "property_purpose")
+page.visual_effect :highlight, 'property_purpose_list'

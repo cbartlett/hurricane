@@ -1,0 +1,2 @@
+page.replace_html(dom_id(@liability), :partial => "liability")
+page[dom_id(@liability)].visual_effect(:highlight)

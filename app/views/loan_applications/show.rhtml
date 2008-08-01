@@ -1,0 +1,73 @@
+<p>
+  <b>Name:</b>
+  <%=h @loan_application.name %>
+</p>
+
+<p>
+  <b>Borrower name:</b>
+  <%=h @loan_application.borrower_name %>
+</p>
+
+<p>
+  <b>Coborrower indicator:</b>
+  <%=h @loan_application.coborrower_indicator %>
+</p>
+
+<p>
+  <b>Coborrower name:</b>
+  <%=h @loan_application.coborrower_name %>
+</p>
+
+<p>
+  <b>Property street:</b>
+  <%=h @loan_application.property_street %>
+</p>
+
+<p>
+  <b>Property city:</b>
+  <%=h @loan_application.property_city %>
+</p>
+
+<p>
+  <b>Property state:</b>
+  <%=h @loan_application.property_state %>
+</p>
+
+<p>
+  <b>Property postal code:</b>
+  <%=h @loan_application.property_postal_code %>
+</p>
+
+<p>
+  <b>Created:</b>
+  <%=h @loan_application.created %>
+</p>
+
+<p>
+  <b>Last updated:</b>
+  <%=h @loan_application.last_updated %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @loan_application.status %>
+</p>
+
+<p>
+  <b>No spouse indicator:</b>
+  <%=h @loan_application.no_spouse_indicator %>
+</p>
+
+<p>
+  <b>Other assets indicator:</b>
+  <%=h @loan_application.other_assets_indicator %>
+</p>
+
+<p>
+  <b>Acknowledgement indicator:</b>
+  <%=h @loan_application.acknowledgement_indicator %>
+</p>
+
+
+<%= link_to 'Edit', edit_loan_application_path(@loan_application) %> |
+<%= link_to 'Back', loan_applications_path %>

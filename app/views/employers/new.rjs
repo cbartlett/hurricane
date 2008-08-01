@@ -1,0 +1,3 @@
+page.insert_html(:bottom, 'employer_list', :partial => "employer")
+page.visual_effect :highlight, 'employer_list'
+page.hide 'add_employer_link'  # really want to diable but this needs some css magic

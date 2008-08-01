@@ -1,0 +1,77 @@
+<h1>New borrower</h1>
+
+<%= error_messages_for :borrower %>
+
+<% form_for(:borrower, :url => borrowers_path) do |f| %>
+  <span>
+    <label>Borrower's Name (including Jr. or Sr. if applicable)</label>
+    <%= f.text_field :borrower_first_name %>
+    <%= f.text_field :borrower_middle_name %>
+    <%= f.text_field :borrower_last_name %>
+    <%= f.text_field :borrower_name_suffix %>
+  </span>
+
+  <p>
+    <b>Borrower application signed date</b><br />
+    <%= f.date_select :borrower_application_signed_date %>
+  </p>
+
+  <p>
+    <b>Borrower home telephone number</b><br />
+    <%= f.text_field :borrower_home_telephone_number %>
+  </p>
+
+  <p>
+    <b>Borrower print position</b><br />
+    <%= f.select(:borrower_print_position, Borrower::BORROWER_PRINT_POSITION_TYPE) %>
+  </p>
+
+  <p>
+    <b>Borrower ssn</b><br />
+    <%= f.text_field :borrower_ssn %>
+  </p>
+
+  <p>
+    <b>Borrower birth date</b><br />
+    <%= f.date_select :borrower_birth_date %>
+  </p>
+
+  <p>
+    <b>Borrower unparsed name</b><br />
+    <%= f.text_field :borrower_unparsed_name %>
+  </p>
+
+  <p>
+    <b>Borrower dependent count</b><br />
+    <%= f.text_field :borrower_dependent_count %>
+  </p>
+
+  <p>
+    <b>Dependent ages</b><br />
+    <%= f.text_field :dependent_ages %>
+  </p>
+  
+  <p>
+    <b>Joint asset liability reporting</b><br />
+    <%= f.select(:joint_asset_liability_reporting, Borrower::JOINT_ASSET_LIABILITY_REPORTING_TYPE) %>
+  </p>
+
+  <p>
+    <b>Marital status</b><br />
+    <%  Borrower::MARITAL_STATUS_TYPE.each do |marital_status| %>
+	  <%= f.radio_button(:marital_status, marital_status) %>
+	  <%= "<label>"+marital_status+"</label>" %>
+	<% end %>
+  </p>
+
+  <p>
+    <b>Schooling years</b><br />
+    <%= f.text_field :schooling_years %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', borrowers_path %>

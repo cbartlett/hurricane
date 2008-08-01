@@ -1,0 +1,12 @@
+# need to delete the current (for now the one and only) new employer
+
+page["new_employer"].visual_effect(:blind_up)
+page.remove("new_employer")
+
+# and then add this employer back in (at the bottom for now)
+page.insert_html(:bottom, 'employer_list', :partial => "employer")
+page.visual_effect :highlight, 'employer_list'
+
+# if the create is successful then re-enable (for now show) the "add new record" link
+
+page.show 'add_employer_link' unless @employer.errors.size > 0

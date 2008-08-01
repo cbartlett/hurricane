@@ -1,0 +1,61 @@
+<h1>New mortgage_term</h1>
+
+<%= error_messages_for :mortgage_term %>
+
+<% form_for(:mortgage_term, :url => mortgage_terms_path) do |f| %>
+  <p>
+    <b>Mortgage type</b><br />
+    <%= f.select(:mortgage_type, MortgageTerm::LOANTYPE) %>
+  </p>
+
+  <p>
+    <b>Other mortgage type description</b><br />
+    <%= f.text_field :other_mortgage_type_description %>
+  </p>
+
+  <p>
+    <b>Agency case identifier</b><br />
+    <%= f.text_field :agency_case_identifier %>
+  </p>
+
+  <p>
+    <b>Lender case identifier</b><br />
+    <%= f.text_field :lender_case_identifier %>
+  </p>
+
+  <p>
+    <b>Borrower requested loan amount</b><br />
+    <%= f.text_field :borrower_requested_loan_amount %>
+  </p>
+
+  <p>
+    <b>Base loan amount</b><br />
+    <%= f.text_field :base_loan_amount %>
+  </p>
+
+  <p>
+    <b>Requested interest rate percent</b><br />
+    <%= f.text_field :requested_interest_rate_percent %>
+  </p>
+
+  <p>
+    <b>Loan amortization term months</b><br />
+    <%= f.text_field :loan_amortization_term_months %>
+  </p>
+
+  <p>
+    <b>Loan amortization type</b><br />
+    <%= f.select(:loan_amortization_type, MortgageTerm::LOANAMORTIZATIONTYPE) %>
+  </p>
+
+  <p>
+    <b>Other amortization type description</b><br />
+    <%= f.text_field :other_amortization_type_description %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', mortgage_terms_path %>

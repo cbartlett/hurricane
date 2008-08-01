@@ -1,0 +1,53 @@
+<p>
+  <b>Mortgage type:</b>
+  <%=h @mortgage_term.mortgage_type %>
+</p>
+
+<p>
+  <b>Other mortgage type description:</b>
+  <%=h @mortgage_term.other_mortgage_type_description %>
+</p>
+
+<p>
+  <b>Agency case identifier:</b>
+  <%=h @mortgage_term.agency_case_identifier %>
+</p>
+
+<p>
+  <b>Lender case identifier:</b>
+  <%=h @mortgage_term.lender_case_identifier %>
+</p>
+
+<p>
+  <b>Borrower requested loan amount:</b>
+  <%=h @mortgage_term.borrower_requested_loan_amount %>
+</p>
+
+<p>
+  <b>Base loan amount:</b>
+  <%=h @mortgage_term.base_loan_amount %>
+</p>
+
+<p>
+  <b>Requested interest rate percent:</b>
+  <%=h @mortgage_term.requested_interest_rate_percent %>
+</p>
+
+<p>
+  <b>Loan amortization term months:</b>
+  <%=h @mortgage_term.loan_amortization_term_months %>
+</p>
+
+<p>
+  <b>Loan amortization type:</b>
+  <%=h @mortgage_term.loan_amortization_type %>
+</p>
+
+<p>
+  <b>Other amortization type description:</b>
+  <%=h @mortgage_term.other_amortization_type_description %>
+</p>
+
+
+<%= link_to 'Edit', edit_mortgage_term_path(@mortgage_term) %> |
+<%= link_to 'Back', mortgage_terms_path %>

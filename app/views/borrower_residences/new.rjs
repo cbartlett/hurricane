@@ -1,0 +1,3 @@
+page.insert_html(:bottom, 'borrower_residence_list', :partial => "borrower_residence")
+page.visual_effect :highlight, 'borrower_residence_list'
+page.hide 'add_borrower_residence_link'  # really want to diable but this needs some css magic

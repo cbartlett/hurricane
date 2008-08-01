@@ -1,0 +1,2 @@
+page.replace_html(dom_id(@income), :partial => "income")
+page[dom_id(@income)].visual_effect(:highlight)

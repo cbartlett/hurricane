@@ -1,0 +1,17 @@
+<h1>Monthly Income</h1>
+
+<table>
+  <tr>
+    <th>Income type</th>
+    <th>Monthly total amount</th>
+  </tr>
+</table>  
+
+<ul id="income_list">
+  <%= render(:partial => "income", :collection => @incomes) %>
+</ul>
+
+
+<br />
+
+<%= link_to_remote 'New Income', {:url => new_income_path}, {:id => "add_income_link" } %>

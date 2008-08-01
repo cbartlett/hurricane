@@ -1,0 +1,3 @@
+page.insert_html(:bottom, 'income_list', :partial => "income")
+page.visual_effect :highlight, 'income_list'
+page.hide 'add_income_link'  # really want to diable but this needs some css magic

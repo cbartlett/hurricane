@@ -1,0 +1,26 @@
+class Asset < ActiveRecord::Base
+
+        ASSETTYPE = ["Automobile",
+                     "Bond",
+                     "BridgeLoanNotDeposited",
+                     "CashOnHand",
+                     "CertificateOfDepositTimeDeposit",
+                     "CheckingAccount",
+                     "EarnestMoneyCashDepositTowardPurchase",
+                     "GiftsTotal",
+                     "GiftsNotDeposited",
+                     "LifeInsurance",
+                     "MoneyMarketFund",
+                     "MutualFund",
+                     "NetWorthOfBusinessOwned",
+                     "OtherLiquidAssets",
+                     "OtherNonLiquidAssets",
+                     "PendingNetSaleProceedsFromRealEstateAssets",
+                     "RelocationMoney",
+                     "RetirementFund",
+                     "SaleOtherAssets",
+                     "SavingsAccount",
+                     "SecuredBorrowedFundsNotDeposited",
+                     "Stock",
+                     "TrustAccount"]
+end

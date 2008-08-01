@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  name: 
+  street_address: 
+  city: 
+  state: 
+  postal_code: 
+  telephone_number: 
+  time_in_line_of_work_years: 
+  self_employed_indicator: 
+  position_description: 
+  income_employment_monthly_amount: 
+  end_date: 
+  start_date: 2007-09-07
+two:
+  id: 2
+  name: 
+  street_address: 
+  city: 
+  state: 
+  postal_code: 
+  telephone_number: 
+  time_in_line_of_work_years: 
+  self_employed_indicator: 
+  position_description: 
+  income_employment_monthly_amount: 
+  end_date: 
+  start_date: 2007-09-07

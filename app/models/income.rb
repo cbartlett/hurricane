@@ -1,0 +1,33 @@
+class Income < ActiveRecord::Base
+
+   INCOMETYPE = ["AlimonyChildSupport",
+                "AutomobileExpenseAccount",
+                "Base",
+                "Bonus",
+                "Commissions",
+                "DividendsInterest",
+                "FosterCare",
+                "NetRentalIncome",
+                "NotesReceivableInstallment",
+                "OtherTypesOfIncome",
+                "Overtime",
+                "Pension",
+                "SocialSecurity",
+                "SubjectPropertyNetCashFlow",
+                "Trust",
+                "Unemployment",
+                "PublicAssistance",
+                "VABenefitsNonEducational",
+                "MortgageDifferential",
+                "MilitaryBasePay",
+                "MilitaryRationsAllowance",
+                "MilitaryFlightPay",
+                "MilitaryHazardPay",
+                "MilitaryClothesAllowance",
+                "MilitaryQuartersAllowance",
+                "MilitaryPropPay",
+                "MilitaryOverseasPay",
+                "MilitaryCombatPay",
+                "MilitaryVariableHousingAllowance"]
+
+end

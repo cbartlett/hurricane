@@ -1,0 +1,12 @@
+# need to delete the current (for now the one and only) new reo_property
+
+page["new_reo_property"].visual_effect(:blind_up)
+page.remove("new_reo_property")
+
+# and then add this reo_property back in (at the bottom for now)
+page.insert_html(:bottom, 'reo_property_list', :partial => "reo_property")
+page.visual_effect :highlight, 'reo_property_list'
+
+# if the create is successful then re-enable (for now show) the "add new record" link
+
+page.show 'add_reo_property_link' unless @reo_property.errors.size > 0

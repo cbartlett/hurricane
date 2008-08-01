@@ -1,0 +1,21 @@
+<h1>New income</h1>
+
+<%= error_messages_for :income %>
+
+<% form_for(:income, :url => incomes_path) do |f| %>
+  <p>
+    <b>Income type</b><br />
+    <%= f.text_field :income_type %>
+  </p>
+
+  <p>
+    <b>Monthly total amount</b><br />
+    <%= f.text_field :monthly_total_amount %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', incomes_path %>

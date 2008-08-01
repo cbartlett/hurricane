@@ -1,0 +1,45 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  street_address: MyString
+  street_address2: MyString
+  city: MyString
+  state: MyString
+  postal_code: 1
+  financed_number_of_units: 1
+  property_legal_description: MyString
+  structure_built_year: 1
+  loan_purpose: MyString
+  property_usage_type: MyString
+  property_acquired_year: 1
+  property_original_cost_amount: 9.99
+  property_existing_lien_amount: 9.99
+  gse_refinance_purpose: MyString
+  refinance_improvements_type: MyString
+  construction_improvement_costs_amount: 9.99
+  gse_title_held_in_names: MyString
+  property_rights_type: MyString
+  gse_title_manner_held_desc: MyString
+  down_payment_source_desc: MyString
+two:
+  id: 2
+  street_address: MyString
+  street_address2: MyString
+  city: MyString
+  state: MyString
+  postal_code: 1
+  financed_number_of_units: 1
+  property_legal_description: MyString
+  structure_built_year: 1
+  loan_purpose: MyString
+  property_usage_type: MyString
+  property_acquired_year: 1
+  property_original_cost_amount: 9.99
+  property_existing_lien_amount: 9.99
+  gse_refinance_purpose: MyString
+  refinance_improvements_type: MyString
+  construction_improvement_costs_amount: 9.99
+  gse_title_held_in_names: MyString
+  property_rights_type: MyString
+  gse_title_manner_held_desc: MyString
+  down_payment_source_desc: MyString

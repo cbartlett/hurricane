@@ -1,0 +1,2 @@
+module MortgageTermsHelper
+end

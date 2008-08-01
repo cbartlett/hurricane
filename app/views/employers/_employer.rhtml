@@ -1,0 +1,52 @@
+<%= '<li id="' + dom_id(employer) + '">'%>
+	<%= error_messages_for :employer %>
+	
+	<% if employer.new_record? %>
+		<% remote_form_for(:employer, employer, :url => employers_path) do |f| %>
+	    	<p>
+				<%= f.text_field :name %>
+				<%= f.text_field :street_address %>
+				<%= f.text_field :city %>
+				<%= f.text_field :state %>
+				<%= f.text_field :postal_code %>
+				<%= f.text_field :telephone_number %>
+				<%= f.text_field :time_in_line_of_work_years %>
+				<%= f.text_field :self_employed_indicator %>
+				<%= f.text_field :position_description %>
+				<%= f.text_field :income_employment_monthly_amount %>
+				<%= f.date_select :start_date %>
+				<%= f.date_select :end_date %>
+			
+			    <%= submit_tag "Update" %>
+		    </p>
+		<% end %>
+	<% else %>
+		<% remote_form_for(:employer, employer, :url => employer_path(employer), :html => { :method => :put }) do |f| %>
+	    	<p>
+				<%= f.text_field :name %>
+				<%= f.text_field :street_address %>
+				<%= f.text_field :city %>
+				<%= f.text_field :state %>
+				<%= f.text_field :postal_code %>
+				<%= f.text_field :telephone_number %>
+				<%= f.text_field :time_in_line_of_work_years %>
+				<%= f.text_field :self_employed_indicator %>
+				<%= f.text_field :position_description %>
+				<%= f.text_field :income_employment_monthly_amount %>
+				<%= f.date_select :start_date %>
+				<%= f.date_select :end_date %>
+			
+			    <%= submit_tag "Update" %>
+		    </p>
+		<% end %>
+	<% end %>
+
+	<% if employer.new_record? %>
+
+		<a href="#" onclick="if (confirm('Are you sure?')) { Element.remove('new_employer'); Element.show('add_employer_link'); }; return false;">Delete</a>
+
+	<% else %>
+	
+		<%= (link_to_remote 'Delete', :url => employer_path(employer), :confirm => 'Are you sure?', :method => :delete) unless employer.new_record?  %>
+	<% end %>
+</li>

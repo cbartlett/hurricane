@@ -1,0 +1,10 @@
+# need to delete the current (for now the one and only) new property_purpose
+
+page["new_property_purpose"].visual_effect(:blind_up)
+page.remove("new_property_purpose")
+
+# and then add this property_purpose back in (at the bottom for now)
+page.insert_html(:bottom, 'property_purpose_list', :partial => "property_purpose")
+page.visual_effect :highlight, 'property_purpose_list'
+
+

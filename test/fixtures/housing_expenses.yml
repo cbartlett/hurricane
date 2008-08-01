@@ -1,0 +1,37 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  present_first_mortgage_principal_and_interest_amount: 9.99
+  proposed_first_mortgage_principal_and_interest_amount: 9.99
+  present_hazard_insurance_amount: 9.99
+  present_homeowners_association_dues_and_condominium_fees_amount: 9.99
+  proposed_homeowners_association_dues_and_condominium_fees_amount: 9.99
+  proposed_hazard_insurance_amount: 9.99
+  present_mi_amount: 9.99
+  proposed_mi_amount: 9.99
+  present_other_housing_expense_amount: 9.99
+  proposed_other_housing_expense_amount: 9.99
+  present_other_mortgage_loan_principal_and_interest_amount: 9.99
+  proposed_other_mortgage_loan_principal_and_interest_amount: 9.99
+  present_real_estate_tax_amount: 9.99
+  proposed_real_estate_tax_amount: 9.99
+  present_rent_amount: 9.99
+  proposed_ground_rent_amount: 9.99
+two:
+  id: 2
+  present_first_mortgage_principal_and_interest_amount: 9.99
+  proposed_first_mortgage_principal_and_interest_amount: 9.99
+  present_hazard_insurance_amount: 9.99
+  present_homeowners_association_dues_and_condominium_fees_amount: 9.99
+  proposed_homeowners_association_dues_and_condominium_fees_amount: 9.99
+  proposed_hazard_insurance_amount: 9.99
+  present_mi_amount: 9.99
+  proposed_mi_amount: 9.99
+  present_other_housing_expense_amount: 9.99
+  proposed_other_housing_expense_amount: 9.99
+  present_other_mortgage_loan_principal_and_interest_amount: 9.99
+  proposed_other_mortgage_loan_principal_and_interest_amount: 9.99
+  present_real_estate_tax_amount: 9.99
+  proposed_real_estate_tax_amount: 9.99
+  present_rent_amount: 9.99
+  proposed_ground_rent_amount: 9.99

@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  street_address: MyString
+  city: MyString
+  state: MyString
+  postal_code: MyString
+  country: MyString
+  borrower_residency_basis: MyString
+  borrower_residency_duration_months: 1
+  borrower_residency_duration_years: 1
+  borrower_residency_type: MyString
+two:
+  id: 2
+  street_address: MyString
+  city: MyString
+  state: MyString
+  postal_code: MyString
+  country: MyString
+  borrower_residency_basis: MyString
+  borrower_residency_duration_months: 1
+  borrower_residency_duration_years: 1
+  borrower_residency_type: MyString

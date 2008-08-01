@@ -1,0 +1,12 @@
+# need to delete the current (for now the one and only) new borrower_residence
+
+page["new_borrower_residence"].visual_effect(:blind_up)
+page.remove("new_borrower_residence")
+
+# and then add this borrower_residence back in (at the bottom for now)
+page.insert_html(:bottom, 'borrower_residence_list', :partial => "borrower_residence")
+page.visual_effect :highlight, 'borrower_residence_list'
+
+# if the create is successful then re-enable (for now show) the "add new record" link
+
+page.show 'add_borrower_residence_link' unless @borrower_residence.errors.size > 0

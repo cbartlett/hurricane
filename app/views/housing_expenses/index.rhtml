@@ -1,0 +1,50 @@
+<h1>Listing housing_expenses</h1>
+
+<table>
+  <tr>
+    <th>Present first mortgage principal and interest amount</th>
+    <th>Proposed first mortgage principal and interest amount</th>
+    <th>Present hazard insurance amount</th>
+    <th>Present homeowners association dues and condominium fees amount</th>
+    <th>Proposed homeowners association dues and condominium fees amount</th>
+    <th>Proposed hazard insurance amount</th>
+    <th>Present mi amount</th>
+    <th>Proposed mi amount</th>
+    <th>Present other housing expense amount</th>
+    <th>Proposed other housing expense amount</th>
+    <th>Present other mortgage loan principal and interest amount</th>
+    <th>Proposed other mortgage loan principal and interest amount</th>
+    <th>Present real estate tax amount</th>
+    <th>Proposed real estate tax amount</th>
+    <th>Present rent amount</th>
+    <th>Proposed ground rent amount</th>
+  </tr>
+  
+<% for housing_expense in @housing_expenses %>
+  <tr>
+    <td><%=h housing_expense.present_first_mortgage_principal_and_interest_amount %></td>
+    <td><%=h housing_expense.proposed_first_mortgage_principal_and_interest_amount %></td>
+    <td><%=h housing_expense.present_hazard_insurance_amount %></td>
+    <td><%=h housing_expense.present_homeowners_association_dues_and_condominium_fees_amount %></td>
+    <td><%=h housing_expense.proposed_homeowners_association_dues_and_condominium_fees_amount %></td>
+    <td><%=h housing_expense.proposed_hazard_insurance_amount %></td>
+    <td><%=h housing_expense.present_mi_amount %></td>
+    <td><%=h housing_expense.proposed_mi_amount %></td>
+    <td><%=h housing_expense.present_other_housing_expense_amount %></td>
+    <td><%=h housing_expense.proposed_other_housing_expense_amount %></td>
+    <td><%=h housing_expense.present_other_mortgage_loan_principal_and_interest_amount %></td>
+    <td><%=h housing_expense.proposed_other_mortgage_loan_principal_and_interest_amount %></td>
+    <td><%=h housing_expense.present_real_estate_tax_amount %></td>
+    <td><%=h housing_expense.proposed_real_estate_tax_amount %></td>
+    <td><%=h housing_expense.present_rent_amount %></td>
+    <td><%=h housing_expense.proposed_ground_rent_amount %></td>
+    <td><%= link_to 'Show', housing_expense_path(housing_expense) %></td>
+    <td><%= link_to 'Edit', edit_housing_expense_path(housing_expense) %></td>
+    <td><%= link_to 'Destroy', housing_expense_path(housing_expense), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New housing_expense', new_housing_expense_path %>

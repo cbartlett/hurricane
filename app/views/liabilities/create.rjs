@@ -1,0 +1,12 @@
+# need to delete the current (for now the one and only) new liability
+
+page["new_liability"].visual_effect(:blind_up)
+page.remove("new_liability")
+
+# and then add this liability back in (at the bottom for now)
+page.insert_html(:bottom, 'liability_list', :partial => "liability")
+page.visual_effect :highlight, 'liability_list'
+
+# if the create is successful then re-enable (for now show) the "add new record" link
+
+page.show 'add_liability_link' unless @liability.errors.size > 0

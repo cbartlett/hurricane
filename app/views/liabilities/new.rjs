@@ -1,0 +1,3 @@
+page.insert_html(:bottom, 'liability_list', :partial => "liability")
+page.visual_effect :highlight, 'liability_list'
+page.hide 'add_liability_link'  # really want to diable but this needs some css magic

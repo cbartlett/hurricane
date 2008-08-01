@@ -1,0 +1,49 @@
+<h1>Government Monitoring</h1>
+
+<%= error_messages_for :government_monitoring %>
+
+<% form_for(:government_monitoring, :url => government_monitoring_path(@government_monitoring), :html => { :method => :put }) do |f| %>
+  <p class="question">
+    <b>Sex</b><br />
+	<%= f.select(:gender_type, GovernmentMonitoring::GENDERTYPE) %>
+  </p>
+
+  <p class="question">
+    <b>Race national origin refusal indicator</b><br />
+    <%= f.check_box :race_national_origin_refusal_indicator %> <br />
+<!--	<label class="desc">Not Applicable: </label><%= f.check_box :hmda_race_not_applicable %> -->
+  </p>
+
+<!-- We believe to be deprecated in latest MISMO 
+<p class="question">
+    <b>Race national origin type</b><br />
+	<%= f.select(:race_national_origin_type, GovernmentMonitoring::RACENATIONALORIGINTYPE) %> <br />
+</p>
+  <p class="question">  
+   <b>Other race national origin description</b><br />
+  <%= f.check_box :other_race_national_origin_description %>
+</p>
+-->
+
+<p class="question">
+	<b>Race</b><br />
+	<%= f.check_box :hmda_race_american_indian_or_alaska_native %><label class="desc"> American Indian</label><br />   
+	<%= f.check_box :hmda_race_asian %>	<label class="desc"> Asian</label><br />
+	<%= f.check_box :hmda_race_black_or_african_american %><label class="desc"> Black or African American</label><br />
+	<%= f.check_box :hmda_race_native_hawaiian_or_other_pacific_islander %><label class="desc"> Hawaiian or Other Pacific Islander</label><br />
+	<%= f.check_box :hmda_race_white %>	<label class="desc"> White</label><br />
+	<%= f.check_box :hmda_race_information_not_provided_by_applicant %><label class="desc"> Information Not Provided</label>
+</p>
+
+  <p class="question">  
+    <b>Ethnicity</b><br />
+	<%= f.select(:hmda_ethnicity_type, GovernmentMonitoring::HMDAETHNICITYTYPE) %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', government_monitoring_path(@government_monitoring) %> |
+<%= link_to 'Back', government_monitorings_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  gender_type: MyString
+  other_race_national_origin_description: MyString
+  race_national_origin_refusal_indicator: false
+  race_national_origin_type: MyString
+  hmda_ethnicity_type: MyString
+two:
+  id: 2
+  gender_type: MyString
+  other_race_national_origin_description: MyString
+  race_national_origin_refusal_indicator: false
+  race_national_origin_type: MyString
+  hmda_ethnicity_type: MyString

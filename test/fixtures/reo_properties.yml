@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  street_address: MyString
+  street_address2: MyString
+  city: MyString
+  state: MyString
+  postal_code: MyString
+  current_residence_indicator: false
+  disposition_status: MyString
+  gse_property_type: MyString
+  lien_installment_amount: 9.99
+  lien_upb_amount: 9.99
+  maintenance_expense_amount: 9.99
+  market_value_amount: 9.99
+  rental_income_gross_amount: 9.99
+  rental_income_net_amount: 9.99
+  subject_indicator: false
+two:
+  id: 2
+  street_address: MyString
+  street_address2: MyString
+  city: MyString
+  state: MyString
+  postal_code: MyString
+  current_residence_indicator: false
+  disposition_status: MyString
+  gse_property_type: MyString
+  lien_installment_amount: 9.99
+  lien_upb_amount: 9.99
+  maintenance_expense_amount: 9.99
+  market_value_amount: 9.99
+  rental_income_gross_amount: 9.99
+  rental_income_net_amount: 9.99
+  subject_indicator: false

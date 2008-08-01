@@ -1,0 +1,38 @@
+<h1>Listing mortgage_terms</h1>
+
+<table>
+  <tr>
+    <th>Mortgage type</th>
+    <th>Other mortgage type description</th>
+    <th>Agency case identifier</th>
+    <th>Lender case identifier</th>
+    <th>Borrower requested loan amount</th>
+    <th>Base loan amount</th>
+    <th>Requested interest rate percent</th>
+    <th>Loan amortization term months</th>
+    <th>Loan amortization type</th>
+    <th>Other amortization type description</th>
+  </tr>
+  
+<% for mortgage_term in @mortgage_terms %>
+  <tr>
+    <td><%=h mortgage_term.mortgage_type %></td>
+    <td><%=h mortgage_term.other_mortgage_type_description %></td>
+    <td><%=h mortgage_term.agency_case_identifier %></td>
+    <td><%=h mortgage_term.lender_case_identifier %></td>
+    <td><%=h mortgage_term.borrower_requested_loan_amount %></td>
+    <td><%=h mortgage_term.base_loan_amount %></td>
+    <td><%=h mortgage_term.requested_interest_rate_percent %></td>
+    <td><%=h mortgage_term.loan_amortization_term_months %></td>
+    <td><%=h mortgage_term.loan_amortization_type %></td>
+    <td><%=h mortgage_term.other_amortization_type_description %></td>
+    <td><%= link_to 'Show', mortgage_term_path(mortgage_term) %></td>
+    <td><%= link_to 'Edit', edit_mortgage_term_path(mortgage_term) %></td>
+    <td><%= link_to 'Destroy', mortgage_term_path(mortgage_term), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New mortgage_term', new_mortgage_term_path %>

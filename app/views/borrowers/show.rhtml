@@ -1,0 +1,73 @@
+<p>
+  <b>Borrower first name:</b>
+  <%=h @borrower.borrower_first_name %>
+</p>
+
+<p>
+  <b>Borrower middle name:</b>
+  <%=h @borrower.borrower_middle_name %>
+</p>
+
+<p>
+  <b>Borrower last name:</b>
+  <%=h @borrower.borrower_last_name %>
+</p>
+
+<p>
+  <b>Borrower name suffix:</b>
+  <%=h @borrower.borrower_name_suffix %>
+</p>
+
+<p>
+  <b>Borrower application signed date:</b>
+  <%=h @borrower.borrower_application_signed_date %>
+</p>
+
+<p>
+  <b>Borrower home telephone number:</b>
+  <%=h @borrower.borrower_home_telephone_number %>
+</p>
+
+<p>
+  <b>Borrower print position:</b>
+  <%=h @borrower.borrower_print_position %>
+</p>
+
+<p>
+  <b>Borrower ssn:</b>
+  <%=h @borrower.borrower_ssn %>
+</p>
+
+<p>
+  <b>Borrower birth date:</b>
+  <%=h @borrower.borrower_birth_date %>
+</p>
+
+<p>
+  <b>Borrower unparsed name:</b>
+  <%=h @borrower.borrower_unparsed_name %>
+</p>
+
+<p>
+  <b>Borrower dependent count:</b>
+  <%=h @borrower.borrower_dependent_count %>
+</p>
+
+<p>
+  <b>Joint asset liability reporting:</b>
+  <%=h @borrower.joint_asset_liability_reporting %>
+</p>
+
+<p>
+  <b>Marital status:</b>
+  <%=h @borrower.marital_status %>
+</p>
+
+<p>
+  <b>Schooling years:</b>
+  <%=h @borrower.schooling_years %>
+</p>
+
+
+<%= link_to 'Edit', edit_borrower_path(@loan_application, @borrower) %> |
+<%= link_to 'Back', borrowers_path(@loan_application) %>

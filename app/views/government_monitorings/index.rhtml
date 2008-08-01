@@ -1,0 +1,28 @@
+<h1>Listing government_monitorings</h1>
+
+<table>
+  <tr>
+    <th>Gender type</th>
+    <th>Other race national origin description</th>
+    <th>Race national origin refusal indicator</th>
+    <th>Race national origin type</th>
+    <th>Hmda ethnicity type</th>
+  </tr>
+  
+<% for government_monitoring in @government_monitorings %>
+  <tr>
+    <td><%=h government_monitoring.gender_type %></td>
+    <td><%=h government_monitoring.other_race_national_origin_description %></td>
+    <td><%=h government_monitoring.race_national_origin_refusal_indicator %></td>
+    <td><%=h government_monitoring.race_national_origin_type %></td>
+    <td><%=h government_monitoring.hmda_ethnicity_type %></td>
+    <td><%= link_to 'Show', government_monitoring_path(government_monitoring) %></td>
+    <td><%= link_to 'Edit', edit_government_monitoring_path(government_monitoring) %></td>
+    <td><%= link_to 'Destroy', government_monitoring_path(government_monitoring), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New government_monitoring', new_government_monitoring_path %>

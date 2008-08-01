@@ -1,0 +1,78 @@
+<p>
+  <b>Borrower:</b>
+  <%=h @asset.borrower_id %>
+</p>
+
+<p>
+  <b>Co borrower:</b>
+  <%=h @asset.co_borrower_id %>
+</p>
+
+<p>
+  <b>Asset type:</b>
+  <%=h @asset.asset_type %>
+</p>
+
+<p>
+  <b>Other asset type description:</b>
+  <%=h @asset.other_asset_type_description %>
+</p>
+
+<p>
+  <b>Holder name:</b>
+  <%=h @asset.holder_name %>
+</p>
+
+<p>
+  <b>Holder street address:</b>
+  <%=h @asset.holder_street_address %>
+</p>
+
+<p>
+  <b>Holder city:</b>
+  <%=h @asset.holder_city %>
+</p>
+
+<p>
+  <b>Holder state:</b>
+  <%=h @asset.holder_state %>
+</p>
+
+<p>
+  <b>Holder postal code:</b>
+  <%=h @asset.holder_postal_code %>
+</p>
+
+<p>
+  <b>Account identifier:</b>
+  <%=h @asset.account_identifier %>
+</p>
+
+<p>
+  <b>Automobile make description:</b>
+  <%=h @asset.automobile_make_description %>
+</p>
+
+<p>
+  <b>Automobile model year:</b>
+  <%=h @asset.automobile_model_year %>
+</p>
+
+<p>
+  <b>Stock bond mutual fund share count:</b>
+  <%=h @asset.stock_bond_mutual_fund_share_count %>
+</p>
+
+<p>
+  <b>Life insurance face value amount:</b>
+  <%=h @asset.life_insurance_face_value_amount %>
+</p>
+
+<p>
+  <b>Cash or market value amount:</b>
+  <%=h @asset.cash_or_market_value_amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>

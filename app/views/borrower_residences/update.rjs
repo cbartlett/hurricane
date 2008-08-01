@@ -1,0 +1,2 @@
+page.replace_html(dom_id(@borrower_residence), :partial => "borrower_residence")
+page[dom_id(@borrower_residence)].visual_effect(:highlight)

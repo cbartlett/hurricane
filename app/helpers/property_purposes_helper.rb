@@ -1,0 +1,2 @@
+module PropertyPurposesHelper
+end
